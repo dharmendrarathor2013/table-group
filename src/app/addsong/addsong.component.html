@@ -1,0 +1,140 @@
+<div class="all-conntent-page">
+<div class="add-song" fxLayout="row" fxLayout.sm="column">
+    <div fxFlex="100" class="right">
+
+        <div fxLayout="row">
+            <div fxFlex="75">
+                <h1>Add song to to your Setlist</h1>
+            </div>
+            <div fxFlex="25">
+                <div class="comman-button">
+                    <button (click)="openAddSongPage()" mat-button>Add Song</button>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" >
+            <form fxLayout="column" fxLayoutAlign="start"  class="comman-from"
+                style="padding-top: 10px;">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                        <mat-label>Song Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                        <mat-label>Artist Name</mat-label>
+                        <input matInput>
+
+                    </mat-form-field>
+                </div>
+
+                <div fxlayout="row">
+                    <div class="comman-button" style="">
+                        <button mat-button>upload MP3/MP4
+                        </button>
+                    </div>
+    
+                </div>
+                <div class="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                    <h1 style="padding-top:10px;">Choose your band mates for this song</h1>
+                </div>
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" >
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                        <mat-label>Band Role(eg Drums)</mat-label>
+                        <mat-select placeholder="">
+                            <mat-option value="option1">Vocalist</mat-option>
+                            <mat-option value="option1">Drums 1</mat-option>
+                            <mat-option value="option1">Bass</mat-option>
+                            <mat-option value="option1">Gultar</mat-option>
+                            <mat-option value="option1">keyboards</mat-option>
+                            <mat-option value="option1"> Wind</mat-option>
+                            <mat-option value="option1">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                        <mat-label>Band Role(eg Bass)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" >
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                        <mat-label>Band Role(eg Bass)</mat-label>
+                        <mat-select placeholder="">
+                            <mat-option value="option1">Vocalist</mat-option>
+                            <mat-option value="option1">Drums 1</mat-option>
+                            <mat-option value="option1">Bass</mat-option>
+                            <mat-option value="option1">Gultar</mat-option>
+                            <mat-option value="option1">keyboards</mat-option>
+                            <mat-option value="option1"> Wind</mat-option>
+                            <mat-option value="option1">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                        <mat-label>Band Role(eg Bass)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" >
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                        <mat-label>Band Role(eg Gultar)</mat-label>
+                        <mat-select>
+                            <mat-option value="option1">Vocalist</mat-option>
+                            <mat-option value="option1">Drums 1</mat-option>
+                            <mat-option value="option1">Bass</mat-option>
+                            <mat-option value="option1">Gultar</mat-option>
+                            <mat-option value="option1">keyboards</mat-option>
+                            <mat-option value="option1"> Wind</mat-option>
+                            <mat-option value="option1">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                        <mat-label>Band male(eg @johnsmith)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="comman-button" style="padding-top: 10px;">
+                    <button mat-button>SAVE & SEND</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- 
+
+
+<div class="all-conntent-page" style="padding-top:75px;padding-left:112px;">
+    <h1 class="main-header">Add Songs to your Setlist</h1>
+
+    <form fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" class="comman-from" style="padding-top: 10px;">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+            <mat-form-field appearance="fill" fxFlex="100" class="form-field-left">
+                <input matInput placeholder="Enter Show Name" class="placeholderinput">
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex="100" class="form-field-right">
+                <input matInput placeholder="Enter Show Date" class="placeholderinput">
+
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+            <mat-form-field appearance="fill" fxFlex="100" class="full-width-field">
+                <input matInput placeholder="Show Description" class="placeholderinput">
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex="100" class="full-width-field">
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div class="row example-button" style="padding-top: 10px;">
+
+            <button mat-button color="primary" class="">Save</button>
+
+
+        </div>
+
+    </form>
+</div> -->

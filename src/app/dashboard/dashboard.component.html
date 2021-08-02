@@ -1,0 +1,112 @@
+<!-- <app-header></app-header> -->
+
+<div fxLayout="row">
+    <div fxFlex="20" fxLayoutAlign="r">
+
+
+        <mat-toolbar color="" class="example-toolbar">
+
+            <div fxLayout="row" fxLayoutAlign="">
+
+                <a><img src="assets/logoheader.png" class="headericon"></a>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="">
+                <h1 class="example-app-name">Softbox</h1>
+            </div>
+
+            <div fxflayout="row" fxLayoutAlign="" style="padding-left: 40px;">
+                <button mat-icon-button (click)="isExpanded = !isExpanded">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+    </div>
+    <div fxFlex="40"  style="padding-top:20px;" fxLayoutGap="20px">
+    <!-- <a class="nav-item nav-link-edit" style="text-decoration:none; 
+            "[routerLink]="['/login']">login</a> -->
+    
+
+        <!-- <a class="nav-item nav-link-edit" style="text-decoration:none; 
+        "[routerLink]="['/dashboard/home']">home</a> -->
+
+        <!-- <a class="nav-item nav-link-edit"  style="text-decoration:none;" [routerLink]="['/dashboard/addsong']">addsong</a> -->
+
+        <!-- <a class="nav-item nav-link-edit" style="text-decoration:none;" [routerLink]="['/dashboard/songsname']">video page</a> -->
+
+        <!-- <a class="nav-item nav-link-edit"  style="text-decoration:none;" [routerLink]="['/dashboard/recording']">recording</a> -->
+
+
+    </div>
+
+    <div fxFlex="40" fxLayoutAlign="end center">
+        <div class="example-button-row">
+            <div class="example-flex-container">
+                <button mat-flat-button color="" class="buttonswallet">Wallet Balance <span
+                        style="font-weight:bold;">$148.76</span></button>
+
+                <button mat-icon-button color="primary" style="color:#007bff" class="material-icons"
+                    aria-label="Example icon button with a home icon">
+                    <span class="material-icons">
+                        notifications
+                    </span>
+
+
+                </button>
+
+                <!-- <button mat-icon-button color="primary" style="color:#007bff" class="material-icons" aria-label="Example icon button with a home icon">
+                    <span class="material-icons">
+                        notifications
+                        </span>
+                        
+
+                </button> -->
+                <button mat-icon-button color="" class="material-icons" style="color:#007bff"
+                    aria-label="Example icon button with a heart icon">
+                    <!-- <mat-icon>favorite</mat-icon> -->
+                    <span class="material-icons">
+                        person
+                    </span>
+
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<mat-sidenav-container class="sidenav-container-data" autosize>
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+        (mouseleave)="mouseleave()">
+        <mat-nav-list>
+            <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+                <span class="full-width" *ngIf="isExpanded || isShowing">Artist Name1 shows Date1</span>
+                <mat-icon mat-list-icon>home</mat-icon>
+                <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+
+            <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+                <a mat-list-item href="...">Song1 Name1</a>
+                <a mat-list-item href="...">Song2 Name1</a>
+                <a mat-list-item href="...">Song3 Name1</a>
+                <a mat-list-item href="...">Song4 Name1</a>
+
+                <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
+                    <span class="full-width" *ngIf="isExpanded || isShowing">Nested Menu</span>
+                    <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenu}"
+                        *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+                </mat-list-item>
+                <div class="submenu" [ngClass]="{'expanded' : showSubSubMenu}" *ngIf="isShowing || isExpanded">
+                    <mat-list-item>SubSubmenu Item 1</mat-list-item>
+                    <mat-list-item>SubSubmenu Item 2</mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+<router-outlet></router-outlet>
+</mat-sidenav-container>

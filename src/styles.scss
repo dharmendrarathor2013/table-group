@@ -1,0 +1,333 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tabe-group-primary: mat-palette($mat-indigo);
+$tabe-group-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$tabe-group-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$tabe-group-theme: mat-light-theme(
+  (
+    color: (
+      primary: $tabe-group-primary,
+      accent: $tabe-group-accent,
+      warn: $tabe-group-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($tabe-group-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+button.mat-focus-indicator.popupadd.mat-button.mat-button-base:hover
+{
+    background: 
+    #277bd6!important;
+}
+.popupadd
+{
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 38px !important;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+
+}
+
+.img-icons
+{
+  width: 33px;
+  height:33px;
+   position: relative;
+   left: 124px!important;
+}
+.mat-button:hover
+{
+  background:none!important;
+}
+
+.matenterlable
+{
+
+  font-size: 20px;
+
+}
+.mat-dialog-content
+{
+  width:300px;
+  height: 100px;
+}
+
+.main-header {
+  color: #007bff;
+  margin-top: 40px;
+}
+
+.sidenav-container-data {
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  
+  background: white;
+}
+.example-sidenav {
+  user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}
+.example-app-name {
+  color: #000;
+  font-size: 29px;
+  font-weight: 400;
+  padding-left: 27px;
+}
+.example-toolbar {
+  background-color: #fff;
+}
+
+.headericon {
+  width: 40px;
+  height: 40px;
+}
+
+.videoicon{
+  width: 80px;
+  height: 80px;
+  margin-top: 70px;
+}
+
+.maticonexpand {
+  color: #0084ff;
+  width: 20px;
+}
+
+.buttonswallet {
+  padding: 11px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 38px !important;
+  padding: 7px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 18px;
+}
+
+.all-conntent-page {
+  height: auto;
+  //align-items: center;
+  background: white;
+  padding: 20px;
+  //padding-left: 13px;
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #ffffff
+}
+
+  .comman-button {
+    button {
+      background: #007bff;
+      border-radius: 38px;
+      color: #fff;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+    }
+  }
+
+  .comman-button {
+    button:hover {
+
+
+      background: #277bd6!important;
+
+    }
+  }
+  .comman-from {
+    // .mat-form-field {
+    //   margin: 0px 10px 0px 10px;
+    // }
+    .form-field-left {
+      margin-right: 10px;
+    }
+    .form-field-right {
+      margin-left: 10px;
+    }
+
+    .full-width-field {
+      width: 100%;
+    }
+    .row.example-button {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 19%;
+      margin-top: 39px;
+      color: #fff;
+      font-size: 17px !important;
+    }
+    .row.example-button5 {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 77%;
+      margin-top: 39px;
+      color: #fff;
+      font-size: 17px !important;
+    }
+
+   
+    .row.example-button6 {
+      padding: 9px 45px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 63%;
+      margin-top: 39px;
+      color: #fff;
+      font-size: 17px !important;
+    }
+    .row.example-button3
+    {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+    
+      margin-top: 39px;
+      color: #fff;
+      font-size: 30px!important;
+
+    }
+    .row.example-button1 {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 27%;
+      /* margin: 6px; */
+      margin-top: 39px;
+    }
+    .row.example-button4
+    {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      /* margin: 6px; */
+      color:#fff;
+      margin-top: 39px;
+      margin-left: 28px;
+
+    }
+
+    .row name
+    {
+ 
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 27%;
+      /* margin: 6px; */
+      margin-top: 39px;
+
+    }
+
+   
+
+    .example-button2 {
+      padding: 9px 24px;
+      background: #007bff;
+      border-radius: 38px;
+      width: 27%;
+      /* margin: 6px; */
+      margin-top: 39px;
+    }
+
+    .mat-button.mat-primary,
+    .mat-icon-button.mat-primary,
+    .mat-stroked-button.mat-primary {
+      color: #fff !important;
+    }
+
+    .mat-drawer-container {
+      background-color: #dddddd;
+    }
+    .placeholderinput {
+      padding: 11.5px 15px 15px 15px;
+    }
+
+    .mat-form-field-label-wrapper {
+      font-size: 17px !important;
+    }
+
+    .mat-form-field-infix {
+      width: 293px !important;
+      padding-left: 24px;
+    }
+
+    .mat-form-field-infix.ng-tns-c99-4 {
+      padding: 20px;
+    }
+    .maticonexpand {
+      color: #0084ff;
+      width: 20px;
+      height: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 330ms ease-out;
+    }
+    .abcok{
+    padding: 9px 24px;
+    background: #007bff;
+    border-radius: 38px;
+    /* margin: 6px; */
+    color: #fff;
+    margin-top: 39px;
+    margin-left: 28px;
+    
+}
+  }
+}

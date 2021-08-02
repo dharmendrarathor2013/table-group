@@ -1,0 +1,94 @@
+
+<div fxlayout="row">
+  <div fxFlex="10"> </div>
+  <div fxFlex="90">
+    <div class="all-conntent-page">
+      <div fxLayoutAlign="" class="home-conntent">
+        <div fxlayout="column">
+          <div flex fxLayout="row">
+            <div fxFlex="" fxLayoutAlign="">
+              <div class="" fxlayout="column">
+                <h1 style="color:#007bff">ARTIST NAME</h1>
+                <h3>SONG NAME</h3>
+              </div>
+            </div>
+            <div fxFlex="" fxLayoutAlign="">
+              <div fxlayout="column">
+                <h1 style="color:#007bff">SHOW DATE</h1>
+                <h3>MY ROLE (eg Keyboards)</h3>
+              </div>
+            </div>
+          </div>
+          <div flex fxLayout="row">
+            <!-- 1. Include action buttons play/stop -->
+            <button onclick="myTest()">Start camera</button>
+  
+            <button onclick="stopRecording()">Start Recording</button>
+            <button onclick="play()">Play</button>
+            <button onclick="download()">Download</button><br>
+          </div>
+          <!--
+    2. Include a video element that will display the current video stream
+    and as well to show the recorded video at the end.
+ -->
+          <div flex fxLayout="row">
+            <hr>
+            <video id="my-preview" controls autoplay></video>
+          </div>
+          <div flex fxlayout="row">
+            <audio id='audio'
+              src="assets/takla-re-whatsapp-status-o-meye-kache-asho-na-amay-balobasho-na-new-ban-52922.mp3" controls autoplay>
+              <!-- <p>If you are reading this, it is because your browser does not support the audio element.</p> -->
+            </audio>
+          </div>
+          <div flex>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bWdeGTJxMQc"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div fxlayout="row">
+            <div fxFlex="30">
+              <a><img src="assets/free-video-icon-818-thumb.png" class="videoicon"></a>
+            </div>
+            <div fxFlex="70">
+              <h1>Reference Audio</h1>
+              <div fxlayout="row">
+                <div fxFlex="30" style="padding-top:10px;">
+                  Main Ref
+                </div>
+                <div fxFlex="70">
+                  <mat-slider aria-label="unit(s)"></mat-slider>
+                </div>
+              </div>
+              <div fxlayout="row">
+                <div fxFlex="30" style="padding-top:10px;">
+                  Instrument2
+                </div>
+                <div fxFlex="70">
+                  <mat-slider aria-label="unit(s)"></mat-slider>
+                </div>
+              </div>
+              <div fxlayout="row">
+                <div fxFlex="30" style="padding-top:10px;">
+                  Instrument3
+                </div>
+                <div fxFlex="70">
+                  <mat-slider aria-label="unit(s)"></mat-slider>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" class="comman-from " style="padding-top: 10px;">
+            <div class="row example-button3" style="padding-top:10px;">
+              <button mat-button>Save & Upload</button>
+            </div>
+            <div class="row example-button4" style="padding-top:10px;">
+              <button mat-button (click)="openAddSongnamediolog()">Close without saving</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="10"></div>
+  </div>
