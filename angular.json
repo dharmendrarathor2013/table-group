@@ -33,7 +33,7 @@
               "src/favicon.ico",
               "src/assets",
                "src/video-recorder/video-recorder.html",
-             { "glob": "video-recorder.html", "input": "src/video-recorder/", "output": "/dashboard/" }
+             { "glob": "video-recorder.html", "input": "src/video-recorder/", "output": "/dashboard" }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",

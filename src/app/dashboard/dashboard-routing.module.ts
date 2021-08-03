@@ -27,6 +27,11 @@ const routes: Routes = [
                 path: 'songsname',
                 loadChildren: () => import('../songsname/songsname.module').then(m => m.SongsnameModule)
             },
+            
+            {
+                path: 'artist-demo/:id',
+                loadChildren: () => import('./artist-demo/artist-demo.module').then(m => m.ArtistDemoModule)
+            },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'Digi_videoRecorder', pathMatch: '/home/ubuntu/project/tab26/tabe-group/Digi_videoRecorder/index.html' }
         ]

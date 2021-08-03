@@ -19,7 +19,7 @@ recordButton.addEventListener('click', () => {
 
 const playButton = document.querySelector('button#play');
 playButton.addEventListener('click', () => {
-  const superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+  const superBuffer = new Blob(recordedBlobs, { type: 'video/webm' });
   recordedVideo.src = null;
   recordedVideo.srcObject = null;
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
@@ -29,7 +29,7 @@ playButton.addEventListener('click', () => {
 
 const downloadButton = document.querySelector('button#download');
 downloadButton.addEventListener('click', () => {
-  const blob = new Blob(recordedBlobs, {type: 'video/webm'});
+  const blob = new Blob(recordedBlobs, { type: 'video/webm' });
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.style.display = 'none';
@@ -52,59 +52,46 @@ function handleDataAvailable(event) {
 
 function startRecording() {
   var audio = document.getElementById("audio");
-        audio.play();
+  audio.play();
+
+  var x = document.getElementById("audio").duration; //tidnmsdnknnsknkjncjknjknzkjmmmmmmmmmmmmmmmmmmmmmmmncjksssssssssssssssssssssssssssssssss
+
+  console.log(x + "djjjjjjjjj");
+
+  //8888888888888888888888888888888888888888888
+  if (x != 0) {
+    // console.log(i+"count");  
+    setTimeout(function () {
+      // console.log(i+"count");  
+      stopRecording();
+      playButton.disabled = false;
+      downloadButton.disabled = false;
+
+      console.log("recorder stopped, data available");
+
+      mediaRecorder.stop();
+
+      var audio = document.getElementById("audio");
+      audio.pause();
+
+    }, x * 1000 + 1000);
+
+    //8888888888888888888888888888888
 
 
-
-                       
-      var   x = document.getElementById("audio").duration; //tidnmsdnknnsknkjncjknjknzkjmmmmmmmmmmmmmmmmmmmmmmmncjksssssssssssssssssssssssssssssssss
-
-console.log(x+"djjjjjjjjj");
-
-//8888888888888888888888888888888888888888888
-if(x!=0)
-{
-   // console.log(i+"count");  
-setTimeout(function(){
-   // console.log(i+"count");  
- stopRecording();
- playButton.disabled = false;
-    downloadButton.disabled = false;
-
-    console.log("recorder stopped, data available");
-
-
-
-  mediaRecorder.stop();
-
-    var audio = document.getElementById("audio");
-                              audio.pause();
-
-
-
-                             
-                    
-
-                  
-
-},x*1000+1000);
-
-//8888888888888888888888888888888
-
-
-}
+  }
 
   recordedBlobs = [];
-  let options = {mimeType: 'video/webm;codecs=vp9,opus'};
+  let options = { mimeType: 'video/webm;codecs=vp9,opus' };
   if (!MediaRecorder.isTypeSupported(options.mimeType)) {
     console.error(`${options.mimeType} is not supported`);
-    options = {mimeType: 'video/webm;codecs=vp8,opus'};
+    options = { mimeType: 'video/webm;codecs=vp8,opus' };
     if (!MediaRecorder.isTypeSupported(options.mimeType)) {
       console.error(`${options.mimeType} is not supported`);
-      options = {mimeType: 'video/webm'};
+      options = { mimeType: 'video/webm' };
       if (!MediaRecorder.isTypeSupported(options.mimeType)) {
         console.error(`${options.mimeType} is not supported`);
-        options = {mimeType: ''};
+        options = { mimeType: '' };
       }
     }
 
@@ -144,8 +131,8 @@ function stopRecording() {
 
 
   mediaRecorder.stop();
-    var audio = document.getElementById("audio");
-                              audio.pause();
+  var audio = document.getElementById("audio");
+  audio.pause();
 
 
 
@@ -175,7 +162,7 @@ document.querySelector('button#start').addEventListener('click', async () => {
   const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
     audio: {
-      echoCancellation: {exact: hasEchoCancellation}
+      echoCancellation: { exact: hasEchoCancellation }
     },
     video: {
       width: 1280, height: 720

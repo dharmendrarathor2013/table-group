@@ -1,19 +1,17 @@
 <style>
+    section {
+        vertical-align: middle;
+        height: 100%;
+    }
 
-section {
-  vertical-align: middle;
-  height: 100%;
-}
-mat-card{
-    width: 100%;
-    height: 300px;
-    display: block;
-    margin-left:auto!important;
-    margin-right:auto!important;  
-    
-}
+    mat-card {
+        width: 100%;
+        height: 300px;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
 
-
+    }
 </style>
 
 
@@ -234,53 +232,53 @@ mat-card{
 
 
 <section fxLayoutAlign="center center">
-<div class="all-conntent-page"  >
-    <div fxLayoutAlign="center center" class="home-conntent">
-        <div fxLayout="column" fxLayoutAlign="center center">
+    <div class="all-conntent-page">
+        <div fxLayoutAlign="center center" class="home-conntent">
+            <div fxLayout="column" fxLayoutAlign="center center">
 
-         <mat-card style=" box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 1px rgb(0 0 0 / 12%)!important;">
-
-
-
-        
-            <h1 class="main-header">SIGN IN</h1>
-            <form fxLayout="column"  class="comman-from " style="padding-top: 10px;">
-                <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
-                    <mat-form-field appearance="legacy" fxFlex="50" class="form-field-left">
-                        <input matInput placeholder="Enter Email" class="placeholderinput">
-                    </mat-form-field>
-                    <mat-form-field appearance="legacy" fxFlex="50" class="form-field-right">
-                        <input matInput placeholder="Enter password" class="placeholderinput">
-    
-                    </mat-form-field>
-                </div>
-              
+                <mat-card
+                    style=" box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 1px rgb(0 0 0 / 12%)!important;">
 
 
-                <div fxLayout="row" >
-                        <div fxFlex="10"></div>
 
-                    <div fxFlex="50">
 
-                        <div fxLayout="row" class="row example-button5" style="padding-top:10px;">
-    
-                            <button mat-button [routerLink]="['/dashboard/addsong']">Login as Lead Artist
-                
-                
-                            </button>
-                            
-                    
-                                </div>
+                    <h1 class="main-header">SIGN IN</h1>
+                    <form fxLayout="column" class="comman-from " style="padding-top: 10px;">
+                        <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                            <mat-form-field appearance="legacy" fxFlex="50" class="form-field-left">
+                                <input matInput placeholder="Enter Email" class="placeholderinput">
+                            </mat-form-field>
+                            <mat-form-field appearance="legacy" fxFlex="50" class="form-field-right">
+                                <input matInput placeholder="Enter password" class="placeholderinput">
+
+                            </mat-form-field>
                         </div>
 
-                   
+                        <div fxLayout="row">
+                            <div fxFlex="10"></div>
 
-                    </div>
+                            <div fxFlex="50">
+                                <div fxLayout="row" class="row example-button5" style="padding-top:10px;">
+                                    <button mat-button [routerLink]="['/dashboard/addsong']">Login as Lead Artist
+                                    </button>
+                                </div>
+                            </div>
+                            <div fxFlex="50">
 
-           
- </form>
- </mat-card>
+                                <div fxLayout="row" class="row example-button6" style="padding-top:10px;">
+
+                                    <a mat-button href='http://localhost:4200/dashboard/video-recorder.html'> Login as Artist
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
         </div>
     </div>
-    </div>
-    <section>
+</section>

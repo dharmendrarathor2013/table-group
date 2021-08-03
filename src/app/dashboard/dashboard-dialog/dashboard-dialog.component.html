@@ -1,0 +1,70 @@
+<style>
+  .popupadd {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 38px !important;
+    padding: 0px;
+    padding-left: 9px;
+    padding-right: 10px;
+    font-size: 14px;
+    width: 24%;
+    margin-left: 185px;
+  }
+</style>
+<div class="header" fxLayout="row">
+  <div fxFlex="50" fxLayoutAlign="flex-end">
+
+    <img src="/assets/Cancel@2.png" [mat-dialog-close]="true" class="img-icons">
+  </div>
+</div>
+
+<div mat-dialog-content style="height: fit-content; width: fit-content;">
+
+  <form [formGroup]="angForm" novalidate (ngSubmit)="AddEvent(angForm.value)">
+    <div>
+      <div class="form-group">
+        <mat-label class="matenterlable">Enter event</mat-label> <br>
+        <input matInput class="form-control" formControlName="event" type="text"><br>
+      </div>
+      <div
+        *ngIf="angForm.controls['event'].invalid && (angForm.controls['event'].dirty || angForm.controls['event'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="angForm.controls['event'].errors?.required">
+          <div class="alert alert-warning alert-dismissible fade show" style="color: red;">
+            Event is required
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-group">
+        <mat-label>Enter Discription</mat-label>
+        <textarea matInput class="form-control" formControlName="discription" type="text"></textarea>
+      </div>
+      <div
+        *ngIf="angForm.controls['discription'].invalid && (angForm.controls['discription'].dirty || angForm.controls['discription'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="angForm.controls['discription'].errors?.required">
+          <div class="alert alert-warning alert-dismissible fade show" style="color: red;">
+            Discription is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="form-group">
+      <mat-label class="matenterlable">Choose a date</mat-label> <br>
+      <input matInput [matDatepicker]="picker" class="form-control" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </div> -->
+
+
+    <!-- <mat-form-field appearance="fill" class="form-group">
+      <mat-label class="matenterlable">Discription</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+     -->
+    <button type="submit" mat-button class="popupadd">Add</button>
+  </form>
+</div>
