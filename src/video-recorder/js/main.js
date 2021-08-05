@@ -94,16 +94,6 @@ function startRecording() {
         options = { mimeType: '' };
       }
     }
-
-
-
-
-
-
-
-
-
-
   }
 
   try {

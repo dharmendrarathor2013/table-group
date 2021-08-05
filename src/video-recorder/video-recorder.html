@@ -301,7 +301,7 @@
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">A1 03-08-2021</a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
 
-            <li><a href="" >S1</a></li>
+            <li><a href="">S1</a></li>
             <li><a href="">S2</a></li>
             <li><a href="">S3</a></li>
             <li><a href="">S4</a></li>
@@ -328,9 +328,10 @@
       <div id="container">
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" style="margin-left: -5px;">
 
-            <div class="col-md-6" style="color:#007bff; font-size:26px; font-weight: 400;">ARTIST NAME: A1</div>
+            <div class="col-md-6" style="color:#007bff; font-size:26px; font-weight: 400; text-align: left;">ARTIST
+              NAME: A1</div>
             <div class="col-md-6" style="color:#007bff;font-size:26px;font-weight: 400">SHOW DATE: 03-08-2021 </div>
 
           </div>
@@ -340,22 +341,41 @@
 
           </div>
 
-        </div>
+        </div><br>
 
-        <video id="gum" playsinline autoplay muted></video>
-        <video id="recorded" playsinline loop></video>
+        <video id="gum" style="--width:55vw; margin-left: 10px;" playsinline autoplay muted></video>
+        <!-- <video id="recorded" playsinline loop></video> -->
 
         <div>
-          <!-- <button id="start" disabled>Start camera</button> -->
-          <button id="record" disabled>Start Recording</button>
-          <button id="play" disabled style="visibility: hidden;">Play</button>
-          <button id="download" disabled>Save & Upload</button><br>
 
-          <audio id='audio'
-            src="../assets/songs/Filhaal2.mp3" controls>
+          <div style="text-align: right; margin-right: 112px;">
+              <div style="margin-right: 102px;">
+            <span id="recorder" disabled style="margin-right: 136px;">
+              <img src="../assets/Images/record.png" style="margin-right: 136px; width: 50px;">
+            </span></div>
+            <div style="margin-right: 208px;
+            margin-top: 5px;">
+            <span id="record" disabled style="margin-right: 136px;">Start Recording</span>
+            
+          </div>
+            <button id="play" disabled style="visibility: hidden;">Play</button>
+            <div style="    margin-top: -105px;            ">
+            <div style="margin-right: -242px;">
+            <span id="download" disabled style="margin-right: 140px;">
+              <img src="../assets/Images/save&upload.png" style="margin-right: 136px; width: 50px;">
+            </span>
+          </div>
+          <div>
+            <p>Save & Upload</p>
+          </div>
+        </div>
+            <!-- <span id="download" disabled>Save & Upload</span><br> -->
+          </div><br>
+          <div style="margin-left: 218px">
+          <audio id='audio' src="../assets/songs/Filhaal2.mp3" controls >
             <!-- <p>If you are reading this, it is because your browser does not support the audio element.</p> -->
           </audio>
-
+        </div>
         </div>
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bWdeGTJxMQc"
               title="YouTube video player" frameborder="0"
@@ -379,7 +399,7 @@
   <!-- include adapter for srcObject shim -->
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  
+
 
   <!-- Bootstrap Js CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -392,7 +412,7 @@
     });
   </script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  
+
   <script type="text/javascript">
 
 
@@ -401,8 +421,10 @@
 
     const errorMsgElement = document.querySelector('span#errorMsg');
     const recordedVideo = document.querySelector('video#recorded');
-    const recordButton = document.querySelector('button#record');
-    recordButton.addEventListener('click', () => {
+    const recordButton1 = document.querySelector('span#recorder');
+    const recordButton = document.querySelector('span#record');
+    recordButton1.addEventListener('click', () => {
+      console.log("jsssssssssssss", recordButton1);
       if (recordButton.textContent === 'Start Recording') {
         startRecording();
       } else {
@@ -423,7 +445,8 @@
       recordedVideo.play();
     });
 
-    const downloadButton = document.querySelector('button#download');
+
+    const downloadButton = document.querySelector('span#download');
     downloadButton.addEventListener('click', () => {
       const blob = new Blob(recordedBlobs, { type: 'video/webm' });
       const url = window.URL.createObjectURL(blob);
@@ -525,6 +548,7 @@
 
     function handleSuccess(stream) {
       recordButton.disabled = false;
+
       console.log('getUserMedia() got stream:', stream);
       window.stream = stream;
 
