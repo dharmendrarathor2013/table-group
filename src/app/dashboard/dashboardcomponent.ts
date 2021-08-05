@@ -63,7 +63,7 @@ export class DashboardComponent implements OnInit {
  openAddEventPage() {
    
    this.dialog.open(DashboardDialogComponent,{
-     width: '400px',
+     width: '500px',
       height:'500px'
     });
   }

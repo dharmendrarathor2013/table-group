@@ -11,7 +11,7 @@ import { Inject } from '@angular/core';
 
 export class AddDialog implements OnInit {
 
-    angForm: any;
+    angForm!: FormGroup;
     event_detail: any;
     event_data: any;
     test: any[] | undefined;
@@ -20,10 +20,11 @@ export class AddDialog implements OnInit {
     eventname_detail: any
     document: any;
     url: any;
-    show:any;
+    show: any;
 
-    constructor(@Inject(DOCUMENT) private _document: Document, private form: FormBuilder) {
-
+    constructor(@Inject(DOCUMENT)
+    private _document: Document,
+        private form: FormBuilder) {
         this.createForm();
     }
 
@@ -42,13 +43,13 @@ export class AddDialog implements OnInit {
         this.event_name = JSON.parse(this.eventname_detail);
     }
 
-    ShowPlayButton(path:any) {
-     this.url = 'assets/Images/Audio.jpg';
-     this.show = 'ruby';
+    ShowPlayButton(path: any) {
+        this.url = 'assets/Images/Audio.jpg';
+        this.show = 'ruby';
     }
 
     UploadAudio(value: any) {
-        
+
         console.log(value.name);
         console.log(value.filepath);
 
@@ -61,7 +62,7 @@ export class AddDialog implements OnInit {
             if (localStorage.getItem('EventDetail')) {
                 eventdetails = JSON.parse(localStorage.getItem('EventDetail') || "{}");
                 // events = [value, ...events];
-              
+
             }
 
             if (eventdetails.length > 0) {
@@ -69,7 +70,7 @@ export class AddDialog implements OnInit {
                     name: value.name,
                     filepath: value.filepath
                 }
-                
+
                 const newArray = eventdetails.filter((e: any) => e.event == this.event_name);
                 if (newArray.length == 0) {
                     let temp = {
@@ -85,7 +86,7 @@ export class AddDialog implements OnInit {
                     alert('Song added successfully');
                     window.location.reload();
                 }
-               
+
                 for (let item of newArray) {
 
                     if (item.event == this.event_name) {
@@ -136,6 +137,7 @@ export class AddDialog implements OnInit {
 
                 alert('Song added successfully');
                 this.angForm.reset();
+                window.location.reload();
             }
             // this.event_index = this.event_data.map((o:any)=> o.event).indexOf(this.event_name)
             // console.log("oioqeqwewqeqw", this.event_index);

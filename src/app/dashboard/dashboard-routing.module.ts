@@ -6,8 +6,6 @@ const routes: Routes = [
     {
         path: '', component: DashboardComponent,
         children: [
-
-
             {
                 path: 'home',
                 loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
@@ -27,11 +25,17 @@ const routes: Routes = [
                 path: 'songsname',
                 loadChildren: () => import('../songsname/songsname.module').then(m => m.SongsnameModule)
             },
-            
+
             {
                 path: 'artist-demo/:id',
                 loadChildren: () => import('./artist-demo/artist-demo.module').then(m => m.ArtistDemoModule)
             },
+
+            {
+                path: 'home/:id',
+                loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
+            },
+
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'Digi_videoRecorder', pathMatch: '/home/ubuntu/project/tab26/tabe-group/Digi_videoRecorder/index.html' }
         ]

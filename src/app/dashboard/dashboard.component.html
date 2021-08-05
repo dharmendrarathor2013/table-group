@@ -93,14 +93,47 @@
     <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
         (mouseleave)="mouseleave()">
         <br>
-        <button (click)="openAddEventPage()" class="popupadd" mat-button>Create Event</button>
+        <!-- <button (click)="openAddEventPage()" class="popupadd" mat-button>Create Event</button> -->
+        <!-- <button routerLink="/home" class="popupadd" mat-button> Create Event</button> -->
+        <button routerLink="/dashboard/home" class="popupadd" mat-button> Create Event</button>
+
 
 
         <mat-accordion>
             <br>
             <mat-icon mat-list-icon style="transform:scale(1.4)">home</mat-icon>
+
+
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <a href="">E1</a>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <a href="">E2</a>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <a href="">E3</a>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
                 (opened)="displayEventDetail(EventList.event)" *ngFor="let EventList of event_data">
+
+
 
                 <mat-expansion-panel-header>
                     <mat-panel-title>
@@ -148,5 +181,6 @@
             </div>
         </mat-nav-list> -->
     </mat-sidenav>
+    <!-- <addsong></addsong> -->
     <router-outlet></router-outlet>
 </mat-sidenav-container>

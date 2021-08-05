@@ -23,10 +23,14 @@
   <form [formGroup]="angForm" novalidate (ngSubmit)="AddEvent(angForm.value)">
     <div>
       <div class="form-group">
-        <mat-label class="matenterlable">Enter event</mat-label> <br>
-        <input matInput class="form-control" formControlName="event" type="text"><br>
+        <mat-label class="matenterlable">Enter event Name</mat-label> <br>
+        <input matInput class="form-control" formControlName="event" type="text">
+        <!-- <app-field-error-display 
+          [displayError]="isFieldValid('event')" 
+          errorMsg="Please inform your city">
+        </app-field-error-display><br> -->
       </div>
-      <div
+      <!-- <div
         *ngIf="angForm.controls['event'].invalid && (angForm.controls['event'].dirty || angForm.controls['event'].touched)"
         class="alert alert-danger">
         <div *ngIf="angForm.controls['event'].errors?.required">
@@ -34,15 +38,33 @@
             Event is required
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div>
       <div class="form-group">
-        <mat-label>Enter Discription</mat-label>
+        <mat-label>Enter Event Date</mat-label><br>
+        <input matInput [matDatepicker]="picker" placeholder="mm/dd/yyyy" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+      <!-- <div
+        *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="angForm.controls['date'].errors?.required">
+          <div class="alert alert-warning alert-dismissible fade show" style="color: red;">
+            Date is required
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+    <div>
+      <div class="form-group">
+        <mat-label>Enter Event Discription</mat-label>
         <textarea matInput class="form-control" formControlName="discription" type="text"></textarea>
       </div>
-      <div
+      <!-- <div
         *ngIf="angForm.controls['discription'].invalid && (angForm.controls['discription'].dirty || angForm.controls['discription'].touched)"
         class="alert alert-danger">
         <div *ngIf="angForm.controls['discription'].errors?.required">
@@ -50,21 +72,9 @@
             Discription is required
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <!-- <div class="form-group">
-      <mat-label class="matenterlable">Choose a date</mat-label> <br>
-      <input matInput [matDatepicker]="picker" class="form-control" formControlName="date">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </div> -->
 
-
-    <!-- <mat-form-field appearance="fill" class="form-group">
-      <mat-label class="matenterlable">Discription</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-     -->
-    <button type="submit" mat-button class="popupadd">Add</button>
+    <br> <button type="submit" mat-button class="popupadd" [disabled]="!angForm.valid">Add</button>
   </form>
 </div>

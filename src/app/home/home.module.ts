@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MatDatepickerModule } from "@angular/material/datepicker";
 /* end angular material  Module*/
 const materialModules = [
   MatButtonModule,
@@ -26,6 +27,7 @@ const materialModules = [
   MatInputModule,
   MatFormFieldModule,
   MatListModule,
+  MatDatepickerModule
 ]
 @NgModule({
   declarations: [

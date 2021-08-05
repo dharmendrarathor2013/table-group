@@ -18,6 +18,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatDatepickerModule } from "@angular/material/datepicker";
+import { AddsongComponent } from "../addsong/addsong.component";
+
 /* end angular material  Module*/
 const materialModules = [
   MatButtonModule,
@@ -38,6 +40,7 @@ const materialModules = [
   declarations: [
     DashboardComponent,
     DashboardDialogComponent,
+    // AddsongComponent
   ],
   imports: [
     CommonModule,

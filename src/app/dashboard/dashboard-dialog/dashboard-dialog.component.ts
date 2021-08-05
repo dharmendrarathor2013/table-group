@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import * as moment from 'moment';
+//import { DatePipe } from '@angular/common';
 // import { MatDialog } from "@angular/material/dialog";
 // import { MatCommonModule } from '@angular/material/core';
 
@@ -18,12 +20,14 @@ export class DashboardDialogComponent implements OnInit {
   constructor(private formbulider: FormBuilder) {
 
     this.createForm();
+     
   }
 
   createForm() {
     this.angForm = this.formbulider.group({
-      event: ['', Validators.required],
-      discription:['', Validators.required]
+      event: [null, Validators.required],
+      discription: [null, Validators.required],
+      date: [null, Validators.required]
     });
   }
 
@@ -31,6 +35,10 @@ export class DashboardDialogComponent implements OnInit {
   }
 
   AddEvent(value: any) {
+   // let dateToDBthis = this.datePipe.transform(value.date, 'yyyy-MM-dd');
+    //console.log('date:',dateToDBthis);
+    // var dateToDB = moment(value.date).format("MM-DD-YYYY");
+    // console.log('date:',dateToDB);
     let events = [];
 
     if (this.angForm.invalid) {
@@ -45,7 +53,7 @@ export class DashboardDialogComponent implements OnInit {
         // events = [value];
       }
 
-      let temp = { event: value.event, discription:value.discription }
+      let temp = { event: value.event, date: moment(value.date).format("MM-DD-YYYY"), discription: value.discription }
       events.push(temp);
       localStorage.setItem('Event', JSON.stringify(events));
       alert('Event added successfully');

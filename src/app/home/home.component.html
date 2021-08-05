@@ -78,35 +78,43 @@
 
 
 <div class="all-conntent-page">
-<div fxLayoutAlign="" class="home-conntent">
-    <div fxLayout="column">
-        <h1 class="main-header">NEW SHOWS</h1>
-        <form fxLayout="column"  class="comman-from " style="padding-top: 10px;">
-            <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
-                <mat-form-field appearance="legacy" fxFlex="50" class="form-field-left">
-                    <input matInput placeholder="Enter Show Name" class="placeholderinput">
-                </mat-form-field>
-                <mat-form-field appearance="legacy" fxFlex="50" class="form-field-right">
-                    <input matInput placeholder="Enter Show Date" class="placeholderinput">
+    <div fxLayoutAlign="" class="home-conntent">
+        <div fxLayout="column">
+            <h1 class="main-header">NEW SHOWS</h1>
+            <form fxLayout="column" class="comman-from " style="padding-top: 10px;" [formGroup]="angForm" novalidate
+                (ngSubmit)="AddEvent(angForm.value)">
+                <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                    <mat-form-field appearance="legacy" fxFlex="50" class="form-field-left">
+                        <mat-label>Enter Show Name</mat-label>
+                        <input matInput class="placeholderinput" formControlName="event">
+                    </mat-form-field>
 
-                </mat-form-field>
-            </div>
-            <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
-                <mat-form-field appearance="legacy" fxFlex="100" class="full-width-field">
-                    <!-- <input matInput placeholder="Show Description" class="placeholderinput"> -->
-                    <mat-label>Show Description</mat-label>
-                    <textarea matInput></textarea>
-                </mat-form-field>
-            </div>
-      
-       
-            <div class="row example-button" style="padding-top:10px;" fxLayoutAlign="left">
+                    <mat-form-field appearance="legacy" fxFlex="50" class="form-field-right">
+                        <mat-label>Enter Show Date</mat-label>
+                        <input matInput [matDatepicker]="picker" placeholder="mm/dd/yyyy" class="placeholderinput"
+                            formControlName="date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="test" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                    <mat-form-field appearance="legacy" fxFlex="100" class="full-width-field">
+                        <!-- <input matInput placeholder="Show Description" class="placeholderinput"> -->
+                        <mat-label>Show Description</mat-label>
+                        <textarea matInput formControlName="discription"></textarea>
+                    </mat-form-field>
+                </div>
 
-        <button mat-button [routerLink]="['/addsong']">Save</button>
 
-            </div>
+                <div class="row example-button" style="padding-top:10px;" fxLayoutAlign="left">
 
-        </form>
+                    <button mat-button >Save</button>
+                    
+                    <!-- <button mat-button routerLink="/dashboard/artist-demo/{{songitem.name}}">Share this song -->
+
+                </div>
+
+            </form>
+        </div>
     </div>
-</div>
 </div>

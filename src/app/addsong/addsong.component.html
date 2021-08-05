@@ -4,7 +4,7 @@
 
             <div fxLayout="row">
                 <div fxFlex="75">
-                    <h1>Add song to your {{event_name}} </h1>
+                    <h1>Add song to your Event </h1>
                 </div>
                 <div fxFlex="25">
                     <div class="comman-button">
@@ -13,26 +13,76 @@
                 </div>
             </div>
 
-            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center"
-                *ngFor="let joinEventList of joinevent">
-                <div *ngIf="joinEventList.event== event_name">
-                    <mat-list role="list" *ngFor="let songitem of joinEventList.song_detail">
-                        <mat-list-item role="listitem"> {{songitem.name}}</mat-list-item>
+
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                <div>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem"> S1</mat-list-item>
                         <div fxFlex="25">
                             <div class="comman-button">
-                                <button mat-button routerLink="/dashboard/artist-demo/{{songitem.name}}">Share this song
+                                <button mat-button routerLink="/dashboard/artist-demo/S1">Share this song
                                 </button>
-                                <!-- <a routerLink="/dashboard/artist-demo/{{songitem.name}}">Share this song</a> -->
                             </div>
                         </div>
                     </mat-list>
                 </div>
             </div>
+               
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                <div>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem"> S2</mat-list-item>
+                        <div fxFlex="25">
+                            <div class="comman-button">
+                                <button mat-button routerLink="/dashboard/artist-demo/S2">Share this song
+                                </button>
+                            </div>
+                        </div>
+                    </mat-list>
+                </div>
+            </div>
+               
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                <div>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem"> S3</mat-list-item>
+                        <div fxFlex="25">
+                            <div class="comman-button">
+                                <button mat-button routerLink="/dashboard/artist-demo/S3">Share this song
+                                </button>
+                            </div>
+                        </div>
+                    </mat-list>
+                </div>
+            </div>
+               
+            
+               
+
+
+               
+
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center"
+                    *ngFor="let joinEventList of joinevent">
+                    <div *ngIf="joinEventList.event== event_name">
+                        <mat-list role="list" *ngFor="let songitem of joinEventList.song_detail">
+                            <mat-list-item role="listitem"> {{songitem.name}}</mat-list-item>
+                            <div fxFlex="25">
+                                <div class="comman-button">
+                                    <button mat-button routerLink="/dashboard/artist-demo/{{songitem.name}}">Share this
+                                        song
+                                    </button>
+                                    <!-- <a routerLink="/dashboard/artist-demo/{{songitem.name}}">Share this song</a> -->
+                                </div>
+                            </div>
+                        </mat-list>
+                    </div>
+                </div>
 
 
 
 
-            <!-- <div fxLayout="row">
+                <!-- <div fxLayout="row">
                 <form fxLayout="column" fxLayoutAlign="start" class="comman-from" style="padding-top: 10px;">
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
                         <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
@@ -119,11 +169,11 @@
 
             </div> -->
 
+            </div>
         </div>
-    </div>
 
-</div>
-<!-- 
+    </div>
+    <!-- 
 
 
 <div class="all-conntent-page" style="padding-top:75px;padding-left:112px;">
