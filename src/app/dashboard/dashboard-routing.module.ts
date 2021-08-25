@@ -31,6 +31,11 @@ const routes: Routes = [
                 loadChildren: () => import('./artist-demo/artist-demo.module').then(m => m.ArtistDemoModule)
             },
 
+            // {
+            //     path: 'songs-detail-demo/:id',
+            //     loadChildren: () => import('./artist-demo/artist-demo.module').then(m => m.ArtistDemoModule)
+            // },
+
             {
                 path: 'home/:id',
                 loadChildren: () => import('../home/home.module').then(m => m.HomeModule)

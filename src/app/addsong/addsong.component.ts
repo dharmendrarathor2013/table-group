@@ -21,7 +21,7 @@ export class AddsongComponent implements OnInit {
   joinevent_detail: any;
   joinevent: any;
   eventname_detail: any;
-  public data: any;
+  //public data: any;
   eventName: any;
 
   constructor(fb: FormBuilder,
@@ -34,11 +34,16 @@ export class AddsongComponent implements OnInit {
       hideRequired: this.hideRequiredControl,
       floatLabel: this.floatLabelControl,
     });
+
     this.createForm();
-    this.data = user.getOption();
     // var test = this.activatedRoute.snapshot.params;
-    // this.eventName = test.id;
-    //console.log("checking", test.id);
+    // //this.eventName = test.id;
+    // console.log("checking", test.id);
+    
+   // this.data = user.getOption();
+   this.activatedRoute.paramMap.subscribe(params => {
+    console.log(params.get('id'));
+  });
   }
 
   createForm() {
@@ -50,6 +55,10 @@ export class AddsongComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+    this.activatedRoute.paramMap.subscribe(params => {
+      console.log(params.get('id'));
+    });
     // Fetching Event Name from database 
     let eventnametemp = localStorage.getItem("EventName");
     this.eventname_detail = eventnametemp;

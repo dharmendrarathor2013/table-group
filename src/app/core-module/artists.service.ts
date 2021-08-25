@@ -6,19 +6,19 @@ import { Router } from "@angular/router";
 })
 export class ArtistsService {
 
-  event_name: any
+  event_name: any;
   eventname_detail: any;
-  private data: any = {};
+  //private data: any = {};
 
   constructor(private router: Router) { }
 
-  setOption(option: any, value: any) {
-    this.data[option] = value;
-  }
+  // setOption(option: any, value: any) {
+  //   this.data[option] = value;
+  // }
 
-  getOption() {
-    return this.data;
-  }
+  // getOption() {
+  //   return this.data;
+  // }
 
   eventDetail(temp: any) {
     this.event_name = temp;

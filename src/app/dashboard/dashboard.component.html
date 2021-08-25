@@ -130,21 +130,21 @@
                 </mat-expansion-panel-header>
             </mat-expansion-panel>
 
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-                (opened)="displayEventDetail(EventList.event)" *ngFor="let EventList of event_data">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true"
+                (onclick)="displayEventDetail(EventList.event)" *ngFor="let EventList of event_data">
 
 
 
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <a routerLink="./addsong/{{EventList.event}}"> {{EventList.event}} </a>
+                        <a routerLink="/dashboard/addsong/{{EventList.event}}">{{EventList.event}} </a>
                         <!-- routerLink="/dashboard/artist-demo/{{songitem.name}}" -->
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center"
                     *ngFor="let joinEventList of joinevent">
-                    <div *ngIf="joinEventList.event== event_name">
+                    <div *ngIf="joinEventList.event == event_name">
 
                         <mat-list role="list" *ngFor="let songitem of joinEventList.song_detail">
                             <mat-list-item role="listitem"> {{songitem.name}}</mat-list-item>
