@@ -11,6 +11,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {MatIconModule} from '@angular/material/icon';
 
+import { BrowserModule } from '@angular/platform-browser';
+
+
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from "@angular/material/radio";
 import { MatInputModule } from '@angular/material/input';
@@ -35,7 +38,8 @@ import { MatListModule } from "@angular/material/list";
         ComponentsModule,
         ExamplesModule,
         Ng2CarouselamosModule,
-
+        BrowserModule,
+        
         MatIconModule,
         MatInputModule,
         MatButtonModule,

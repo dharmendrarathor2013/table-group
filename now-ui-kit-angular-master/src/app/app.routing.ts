@@ -12,6 +12,7 @@ import { ProfileComponent } from './examples/profile/profile.component';
 import { AboutComponent } from "./components/about/about.component";
 import { ServicesComponent} from "./components/services/services.component";
 import { ContactsComponent } from "./components/contacts/contacts.component";
+import { ExamplesComponent } from './examples/examples.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,8 @@ const routes: Routes = [
     { path: 'components/about', component: AboutComponent },
     { path: 'components/services', component: ServicesComponent },
     { path: 'components/contacts', component: ContactsComponent },
+    { path: 'examples', component: ExamplesComponent },
+
 
 ];
 
