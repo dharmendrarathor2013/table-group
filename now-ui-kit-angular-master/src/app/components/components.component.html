@@ -273,12 +273,16 @@
     <style id="elementor-frontend-inline-css" type="text/css">
         .elementor-4347 .elementor-element.elementor-element-dibtba3:not(.elementor-motion-effects-element-type-background),
         .elementor-4347 .elementor-element.elementor-element-dibtba3>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-            background-color: #E7E7E7;
+            background-color: #0e0b0b;
 
         }
 
         .elementor-4347 .elementor-element.elementor-element-dibtba3 {
             transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            transition-property: background, border, border-radius, box-shadow;
+            transition-duration: 0.3s, 0.3s, 0.3s, 0.3s;
+            transition-timing-function: ease, ease, ease, ease;
+            transition-delay: 0s, 0s, 0s, 0s;
             margin-top: -30px;
             margin-bottom: 0px;
             padding: 16px 0px 109px 0px;
@@ -3103,6 +3107,23 @@
             color: #000000;
         }
 
+        .tm-testi--default .tm-testi__item-body .before-holder-default:before {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(90%, 50%);
+            -ms-transform: translate(90%, 50%);
+            transform: translate(90%, 50%);
+            display: inline-block;
+            font-family: 'nc-icon-mini';
+            line-height: 1;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: '\eb16';
+            font-size: 12px;
+        }
+
+
         .template-default .services-item-inner,
         .template-default-description .services-item-inner,
         .template-sidebar-media-icon .services-item-inner {
@@ -3286,7 +3307,7 @@
 
         .tm-testi__title-sup,
         .tm-testi__item-name {
-            color: #000000;
+            color: black;
         }
 
         .tm-testi--default-invert .tm-testi__title-sup,
@@ -3320,6 +3341,7 @@
             color: #000000;
         }
 
+
         .tm-testi--default footer .tm-testi__item-meta-content cite .tm-testi__item-name:before {
             background: #000000;
         }
@@ -3352,6 +3374,16 @@
         .tm-testi__item-body:before,
         .tm-testi--speech-bubble .tm-testi__item-body p:before {
             color: #000000;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            height: 37px;
+            width: 37px;
+            border-radius: 50px;
+            border-width: 1px;
+            border-style: solid;
+            text-align: center;
+            margin-top: -13px;
         }
 
         .tm-testi__item-avatar,
@@ -4788,15 +4820,18 @@
                                 </li>
                                 <li id="menu-item-3062"
                                     class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/about">About</a>
+
+                                    <a [routerLink]="['/components/about']">
+                                        About
+                                    </a>
                                 </li>
                                 <li id="menu-item-5756"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/services/">Services</a>
+                                    <a [routerLink]="['/components/services']">Services</a>
                                 </li>
                                 <li id="menu-item-1526"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/contacts/">Contacts</a>
+                                    <a [routerLink]="['/components/contacts']">Contacts</a>
                                 </li>
                                 <li id="" class="super-guacamole__menu menu-item menu-item-has-children"
                                     hidden="hidden"><a href="#">More<span class="sub-menu-toggle"></span></a>
@@ -4963,74 +4998,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
-
-
-
-
-                                                    <!-- <div class="elementor-container elementor-column-gap-default">
-                                                        <div class="elementor-row">
-                                                            <div class="elementor-element elementor-element-vtxo6cu elementor-column elementor-col-100 elementor-top-column"
-                                                                data-id="vtxo6cu" data-element_type="column">
-                                                                <div
-                                                                    class="elementor-column-wrap  elementor-element-populated">
-                                                                    <div class="elementor-widget-wrap">
-                                                                        <div class="elementor-element elementor-element-beuhxy3 invert elementor-widget elementor-widget-heading"
-                                                                            data-id="beuhxy3" data-element_type="widget"
-                                                                            data-widget_type="heading.default">
-                                                                            <div class="elementor-widget-container">
-                                                                                <h2
-                                                                                    class="elementor-heading-title elementor-size-default">
-                                                                                    Need an amazing sitter?</h2>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-va7ev0p invert elementor-widget elementor-widget-text-editor"
-                                                                            data-id="va7ev0p" data-element_type="widget"
-                                                                            data-widget_type="text-editor.default">
-                                                                            <div class="elementor-widget-container">
-                                                                                <div
-                                                                                    class="elementor-text-editor elementor-clearfix">
-                                                                                    <p>Contact Daijha to schedule a
-                                                                                        sitting and to answer all your
-                                                                                        questions!</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-cmw9t2l elementor-widget elementor-widget-spacer"
-                                                                            data-id="cmw9t2l" data-element_type="widget"
-                                                                            data-widget_type="spacer.default">
-                                                                            <div class="elementor-widget-container">
-                                                                                <div class="elementor-spacer">
-                                                                                    <div class="elementor-spacer-inner">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-k6r2zcg elementor-align-center elementor-widget elementor-widget-button"
-                                                                            data-id="k6r2zcg" data-element_type="widget"
-                                                                            data-widget_type="button.default">
-                                                                            <div class="elementor-widget-container">
-                                                                                <div class="elementor-button-wrapper">
-                                                                                    <a href="/contacts"
-                                                                                        class="elementor-button-link elementor-button elementor-size-md"
-                                                                                        role="button">
-                                                                                        <span
-                                                                                            class="elementor-button-content-wrapper">
-                                                                                            <span
-                                                                                                class="elementor-button-text">Contact
-                                                                                                Info</span>
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
                                                 </section>
+
                                                 <section
                                                     class="elementor-element elementor-element-nfnc0r3 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
                                                     data-id="nfnc0r3" data-element_type="section">
@@ -5098,56 +5067,72 @@
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="elementor-text-editor elementor-clearfix"
                                                                                     style="text-align: center;">
-                                                                                    <p>Hi! My name is Daijha and I am
+                                                                                    <p style="    margin: 25px;">Hi! My
+                                                                                        name is Daijha and I am
                                                                                         your new favorite sitter! I very
                                                                                         proudly received my</p>
-                                                                                    <p>Bachelors of Science from Stephen
+                                                                                    <p style="    margin: 25px;">
+                                                                                        Bachelors of Science from
+                                                                                        Stephen
                                                                                         F. Austin State University in
                                                                                         Nacogdoches, TX. My subject</p>
-                                                                                    <p>major was Human Development and
+                                                                                    <p style="    margin: 25px;">major
+                                                                                        was Human Development and
                                                                                         Family Studies. I have four
                                                                                         years of knowledge and three</p>
-                                                                                    <p>years of experience as a Child
+                                                                                    <p style="    margin: 25px;">years
+                                                                                        of experience as a Child
                                                                                         care Provider. Majoring in Human
                                                                                         Development and family</p>
-                                                                                    <p>studies has taught me a lot about
+                                                                                    <p style="    margin: 25px;">studies
+                                                                                        has taught me a lot about
                                                                                         the development of a child and
                                                                                         successful child care skills.
                                                                                     </p>
-                                                                                    <p>During my last two years of
+                                                                                    <p style="    margin: 25px;">During
+                                                                                        my last two years of
                                                                                         college I took a position as a
                                                                                         teacher’s assistant at our
                                                                                         schools Early</p>
-                                                                                    <p>Childhood Center. While working
+                                                                                    <p style="    margin: 25px;">
+                                                                                        Childhood Center. While working
                                                                                         there I was asked by a parent to
                                                                                         become their summer nanny,</p>
-                                                                                    <p>which was my first nanny
+                                                                                    <p style="    margin: 25px;">which
+                                                                                        was my first nanny
                                                                                         opportunity. After helping a few
                                                                                         families, I knew that this was
                                                                                     </p>
-                                                                                    <p>something I loved to do. Caring
+                                                                                    <p style="    margin: 25px;">
+                                                                                        something I loved to do. Caring
                                                                                         for children and helping
                                                                                         families is my passion, what
                                                                                         better way</p>
-                                                                                    <p>to do both than being a
+                                                                                    <p style="    margin: 25px;">to do
+                                                                                        both than being a
                                                                                         babysitter/child care giver.</p>
-                                                                                    <p>Finding someone you trust and
+                                                                                    <p style="    margin: 25px;">Finding
+                                                                                        someone you trust and
                                                                                         feel comfortable with can be
                                                                                         time consuming and stressful.
                                                                                     </p>
-                                                                                    <p>Have no fear, Daijha’s Here! I am
+                                                                                    <p style="    margin: 25px;">Have no
+                                                                                        fear, Daijha’s Here! I am
                                                                                         here to make it as serene and
                                                                                         easy as possible. I aim to be
                                                                                         the</p>
-                                                                                    <p>best child care provider I can
+                                                                                    <p style="    margin: 25px;">best
+                                                                                        child care provider I can
                                                                                         be. I do so by being gentle,
                                                                                         kind, caring, responsible and
                                                                                         prompt. I</p>
-                                                                                    <p>am very adaptable when it comes
+                                                                                    <p style="    margin: 25px;">am very
+                                                                                        adaptable when it comes
                                                                                         to the needs of family’s. Being
                                                                                         a child care giver/babysitter, I
                                                                                     </p>
-                                                                                    <p>have earned an incredible
+                                                                                    <p style="    margin: 25px;">have
+                                                                                        earned an incredible
                                                                                         reputation as I provide
                                                                                         trustworthy and notable child
                                                                                         care services.</p>
@@ -5167,46 +5152,22 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- <div class="elementor-element elementor-element-9s23ku9 elementor-column elementor-col-50 elementor-top-column"
-                                                                data-id="9s23ku9" data-element_type="column">
-                                                                <div
-                                                                    class="elementor-column-wrap  elementor-element-populated">
-                                                                    <div class="elementor-widget-wrap">
-                                                                        <div class="elementor-element elementor-element-utxdvhc elementor-widget elementor-widget-spacer"
-                                                                            data-id="utxdvhc" data-element_type="widget"
-                                                                            data-widget_type="spacer.default">gvuyfgugf
-                                                                            <div class="elementor-widget-container">
-                                                                                <div class="elementor-spacer">
-                                                                                    <div class="elementor-spacer-inner">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-0fjxdcs elementor-widget elementor-widget-image"
-                                                                            data-id="0fjxdcs" data-element_type="widget"
-                                                                            data-widget_type="image.default">
-                                                                            <div class="elementor-widget-container">
-                                                                                <div class="elementor-image">
-                                                                                    <img width="683" height="1024"
-                                                                                        src="https://www.daijhassitting.com/wp-content/uploads/2020/01/msridge-683x1024.png"
-                                                                                        class="attachment-large size-large"
-                                                                                        alt=""
-                                                                                        srcset="https://www.daijhassitting.com/wp-content/uploads/2020/01/msridge-683x1024.png 683w, https://www.daijhassitting.com/wp-content/uploads/2020/01/msridge-200x300.png 200w, https://www.daijhassitting.com/wp-content/uploads/2020/01/msridge-768x1151.png 768w, https://www.daijhassitting.com/wp-content/uploads/2020/01/msridge.png 1002w"
-                                                                                        sizes="(max-width: 683px) 100vw, 683px">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </section>
-                                                <section
+                                                <!-- my section border -->
+                                                <section style="    background-color: #E7E7E7;
+                                                height: 55px;"
                                                     class="elementor-element elementor-element-dibtba3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
                                                     data-id="dibtba3" data-element_type="section"
                                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                    <div class="elementor-container elementor-column-gap-default">
+                                                    <!-- my section border -->
+                                                    <div class="elementor-container elementor-column-gap-default" style="background-color: #E7E7E7;
+                                                    
+                                                    float: left;
+                                                    width: 50px;
+                                                    height: 90px;
+                                                    margin-top: -70px;">
                                                         <div class="elementor-row">
                                                             <div class="elementor-element elementor-element-61910a2 elementor-column elementor-col-100 elementor-top-column"
                                                                 data-id="61910a2" data-element_type="column">
@@ -5216,6 +5177,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div style="background-color: #E7E7E7;
+                                                    
+                                                    float: right;
+                                                    width: 50px;
+                                                    height: 90px;
+                                                    margin-top: -70px;">
+
                                                     </div>
                                                 </section>
                                                 <section
@@ -5648,172 +5617,44 @@
                                                                                                     </div>
                                                                                                 </div>
 
-
-
-
-                                                                                                <!-- my Work start -->
-                                                                                                <!-- <div>
-                                                                                                    <p>hello sam</p>
-                                                                                                    <ngb-carousel #carousel [interval]="4000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
-                                                                                                        <ng-template ngbSlide *ngFor="let img of images; index as i">
-                                                                                                          <div class="carousel-caption">
-                                                                                                            <h3>My slide {{i + 1}} title</h3>
-                                                                                                            <h3>jdjshvjid danbch  uchb</h3>
-                                                                                                          </div>
-                                                                                                          <a href="" target="_blank" rel="nofollow noopener noreferrer">
-                                                                                                            <div class="picsum-img-wrapper">
-                                                                                                              <img [src]="img" alt="My image {{i + 1}} description">
-                                                                                                            </div>
-                                                                                                          </a>
-                                                                                                        </ng-template>
-                                                                                                      </ngb-carousel>
-                                                                                                      
-                                                                                                      <hr>
-                                                                                                      
-                                                                                                      
-                                                                                                </div> -->
-
-
-                                                                                                
                                                                                                 <!-- My slider -->
-                                                                                                <div>
-                                                                                                    <!-- <div ng2-carouselamos class="slides-wrapper"
-                                                                                                        [autoplay] = "true"
-                                                                                                        [autoplayspeed] ="1000"
-                                                                                                        scrollDirection="left"
-                                                                                                        [slidesMargin]="100"
-                                                                                                        [width]="582"
-                                                                                                        [items]="[
-                                                                                                { name: 'We love Daijha! She is great with our active 3-year old son and finds activities that help cultivate his learning while also allowing him to expend energy. She is dependable and knowledgeable in her craft. We utilize her for day sitting and overnight sitting when we do “staycations” in order to have quality parent time.', 
-                                                                                                  footer:'Lydia B. (Parent)' },
+                                                                                                <div class="tm-testi__inner"
+                                                                                                    style="height: 134px;">
 
-                                                                                                { name: 'Daijha was our first non-family-member sitter, and she has since become part of our family. Not only is she reliable and thorough as a professional, she is caring and attentive to our children, pets and family overall. She is a joy and a comfort to our family every time we see her!  We couldn’t ask for a better care provider…',
-                                                                                                  footer:'Helen P. (Parent)'},
+                                                                                                    <blockquote>
 
-                                                                                                { name: 'Given her excellent repertoire with my child and other parents, we decided to also hire her for babysitting duties. She has truly been God-sent. I have never felt more comfortable leaving my child in someone else’s hands than I have with Daijha. She is CPR certified, attentive to small details, always on time and professional, and has proved herself a…',
-                                                                                                  footer:'Ash M. (parent)'},
-
-                                                                                                { name: 'She’s an awesome, hands on and loving care giver. Kids and families love her! They can count on her to care for their littles while they are away.',
-                                                                                                  footer:'Naneki C. (Former Co Teacher)'} ]"
-                                                                                                        [$item]="itemTemplate"
-                                                                                                        [$prev]="prevTemplate"
-                                                                                                        [$next]="nextTemplate"
-                                                                                                        (onSelectedItem)="selectedItem = $event.item; selectedIndex = $event.index">
-                                                                                                    </div> -->
-
-                                                                                                    <div class="container">
-                                                                                                        <div class="row">
-                                                                                                          <div class="col-md-12 py-3">
-                                                                                                            <ngb-carousel *ngIf="event_list" style="background-color: none;">
-                                                                                                              <ng-template ngbSlide *ngFor="let event of past_events" style="background-color: none;">
-                                                                                                               <p  >{{event.event}}</p>
-                                                                                                               <footer>
-                                                                                                                <div
-                                                                                                                    class="tm-testi__item-meta-content">
-                                                                                                                    <cite>
-                                                                                                                        <span
-                                                                                                                            class="tm-testi__item-name">
-                                                                                                                            {{event.footer}}</span>
-                                                                                                                    </cite>
-
-                                                                                                                </div>
-                                                                                                            </footer>
-                   
-                                                                                                              </ng-template>
-                                                                                                            </ngb-carousel>
-                                                                                                          </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <!-- <ng-template #item
-                                                                                                        let-item
-                                                                                                        let-i="index"
-                                                                                                        #itemTemplate>
                                                                                                         <div
-                                                                                                            style="min-width: 707px;height: 200px;  margin: 5em auto; margin-left: 53px;">
-                                                                                                            <p style="width: 70%; font-style: italic;
-                                                                                                        font-weight: 300;
-                                                                                                        font-size: 16px;
-                                                                                                        font-family: Lato, sans-serif;
-                                                                                                       
-                                                                                                        text-align: left;
-                                                                                                        color: #828282;
-                                                                                                        
-                                                                                                        letter-spacing: -0.3px;
-                                                                                                         margin-bottom: 9px;  "
-                                                                                                                *ngIf="i === selectedIndex">
-                                                                                                                {{item.name}}
-                                                                                                            </p>
-                                                                                                            <p style="width: 70%; font-style: italic;
-                                                                                                            font-weight: 300;
-                                                                                                            height: 700px;
-                                                                                                            font-size: 16px;
-                                                                                                            font-family: Lato, sans-serif;
-                                                                                                            letter-spacing: 0.03em;
-                                                                                                            text-align: left;
-                                                                                                            color: #828282;"
-                                                                                                                *ngIf="i !== selectedIndex">
-                                                                                                                {{item.name}}
-                                                                                                            </p>
+                                                                                                            class="tm-testi__item-body">
+                                                                                                            <div
+                                                                                                                class="before-holder-default">
+                                                                                                            </div>
+                                                                                                            <ngb-carousel
+                                                                                                                *ngIf="event_list"
+                                                                                                                style="background-color: none;">
+                                                                                                                <ng-template
+                                                                                                                    ngbSlide
+                                                                                                                    *ngFor="let event of past_events">
 
-                                                                                                            <footer>
-                                                                                                                <div
-                                                                                                                    class="tm-testi__item-meta-content">
-                                                                                                                    <cite>
-                                                                                                                        <span
-                                                                                                                            class="tm-testi__item-name"
-                                                                                                                            *ngIf="i === selectedIndex">
-                                                                                                                            {{item.footer}}</span>
-                                                                                                                        <span
-                                                                                                                            class="tm-testi__item-name"
-                                                                                                                            *ngIf="i !== selectedIndex"
-                                                                                                                            class="tm-testi__item-name"
-                                                                                                                            mat-line>
-                                                                                                                            {{item.footer}}
-                                                                                                                        </span>
-                                                                                                                    </cite>
-
-                                                                                                                </div>
-                                                                                                            </footer>
+                                                                                                                    <p>{{event.paragraph}}
+                                                                                                                    </p>
+                                                                                                                    <footer>
+                                                                                                                        <div
+                                                                                                                            class="tm-testi__item-meta-content">
+                                                                                                                            <cite>
+                                                                                                                                <span
+                                                                                                                                    style="margin-left: 3px;"
+                                                                                                                                    class="tm-testi__item-name">
+                                                                                                                                    {{event.footer}}</span>
+                                                                                                                            </cite>
+                                                                                                                        </div>
+                                                                                                                    </footer>
+                                                                                                                </ng-template>
+                                                                                                            </ngb-carousel>
                                                                                                         </div>
-                                                                                                    </ng-template> -->
+                                                                                                    </blockquote>
                                                                                                 </div>
 
-<!-- My Slider -->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-12 py-3">
-          <h2 class="pb-2">Past Events</h2>
-          <ngb-carousel *ngIf="event_list" style="color: red;">
-            <ng-template ngbSlide *ngFor="let event of past_events">
-             <span style="color: black;" >{{event.event}}</span>
-            </ng-template>
-          </ngb-carousel>
-        </div>
-      </div>
-    </div> -->
- 
-<!-- <section> 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 py-3">
-        <h2 class="pb-2">Past Events</h2>
-        <ngb-carousel *ngIf="event_list">
-          <ng-template ngbSlide *ngFor="let event of past_events">
-            <img [src]="event.event" alt="Random slide" style="height: 100%;">
-            <div style="height: 100%;">{{event.event}}</div>
-            <div class="carousel-caption">
-              <h3>{{ event.eventLocation }}</h3>
-              <p [innerText]="event.eventDescription"></p>
-            </div>
-          </ng-template>
-        </ngb-carousel>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-                                                                                                
-
+                                                                                                <!-- My Slider -->
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -6044,7 +5885,11 @@
 
         </div>
         <!-- #content -->
-
+        <div>
+            <div style="float: left; height: 90px; width: 40px; background-color: #E7E7E7;"></div>
+            <div style="float: right; height: 90px; width: 72px; background-color: #E7E7E7;"></div>
+            <div style="margin-left: 626px; height: 90px; width: 29px; background-color: #E7E7E7;"></div>
+        </div>
         <footer id="colophon" class="site-footer style-1" role="contentinfo">
 
             <div class="footer-area-wrap">
@@ -6067,13 +5912,16 @@
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062">
-                                        <a href="../components/about" aria-current="page">About</a>
+                                        <a [routerLink]="['/components/about']">
+                                            About
+                                        </a>
                                     </li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756">
-                                        <a href="../components/services">Services</a>
+                                        <a [routerLink]="['/components/services']">
+                                            Services</a>
                                     </li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526">
-                                        <a href="../components/contacts">Contacts</a>
+                                        <a [routerLink]="['/components/contacts']">Contacts</a>
                                     </li>
                                 </ul>
                             </div>

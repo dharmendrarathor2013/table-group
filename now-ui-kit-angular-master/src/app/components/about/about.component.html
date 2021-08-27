@@ -4718,19 +4718,19 @@
                                 data-duration="300" data-mobile-button="1">
                                 <li id="menu-item-274"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-274 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="./index">Home</a>
+                                    <a [routerLink]="['/index']">Home</a>
                                 </li>
                                 <li id="menu-item-3062"
                                     class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/about">About</a>
+                                    <a href="/components/about">About</a>
                                 </li>
                                 <li id="menu-item-5756"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/services/">Services</a>
+                                    <a [routerLink]="['/components/services']">Services</a>
                                 </li>
                                 <li id="menu-item-1526"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526 tm-mega-menu-top-item item-submenu-position-fullwidth">
-                                    <a href="../components/contacts/">Contacts</a>
+                                    <a [routerLink]="['/components/contacts']">Contacts</a>
                                 </li>
                                 <li id="" class="super-guacamole__menu menu-item menu-item-has-children"
                                     hidden="hidden"><a href="#">More<span class="sub-menu-toggle"></span></a>
@@ -5632,7 +5632,7 @@
                                                                                             <div class="tm-testi__list swiper-wrapper tm-testi-slider__items"
                                                                                                 style="transition-duration: 0ms; transform: translate3d(-1171px, 0px, 0px);">
                                                                                                 <div class="tm-testi__item swiper-slide tm-testi-slider__item swiper-slide-duplicate swiper-slide-prev"
-                                                                                                    data-swiper-slide-index="2"
+                                                                                                    
                                                                                                     style="width: 1156px; margin-right: 15px;">
                                                                                                     <div
                                                                                                         class="tm-testi__inner">
@@ -5724,72 +5724,43 @@
                                                                                                         <div>
                                                                                                             <div ng2-carouselamos
                                                                                                                 [width]="1137"
-                                                                                                                [items]="[
-                                                                                                                { name:'Given her excellent repertoire with my child and other parents, we decided to also hire her for babysitting duties. She has truly been God-sent. I have never felt more comfortable leaving my child in someone else’s hands than I have with Daijha. She is CPR certified, attentive to small details, always on time and professional,…',
-                                                                                                                  footer:'Ash M. (parent)'},
-
-                                                                                                                { name: 'We love Daijha! She is great with our active 3-year old son and finds activities that help cultivate his learning while also allowing him to expend energy. She is dependable and knowledgeable in her craft. We utilize her for day sitting and overnight sitting when we do “staycations” in order to have quality parent time.', 
-                                                                                                                  footer:'Lydia B. (Parent)' },
-        
-                                                                                                                { name: 'Daijha was our first non-family-member sitter, and she has since become part of our family. Not only is she reliable and thorough as a professional, she is caring and attentive to our children, pets and family overall. She is a joy and a comfort to our family every time we see her!  We couldn’t ask…',
-                                                                                                                  footer:'Helen P. (Parent)'} ]"
-                                                                                                                [$item]="itemTemplate"
-                                                                                                                [$prev]="prevTemplate"
-                                                                                                                [$next]="nextTemplate"
-                                                                                                                (onSelectedItem)="selectedItem = $event.item; selectedIndex = $event.index">
+                                                                                                                [items]="[{ }]"
+                                                                                                                >
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
 
                                                                                             </div>
-                                                                                            <ng-template let-item
-                                                                                                let-i="index"
+                                                                                            <ng-template 
                                                                                                 #itemTemplate>
                                                                                                 <div class="tm-testi__item-body"
                                                                                                     style="min-width: 1163px;height: 200px;  margin: 5em auto;">
-                                                                                                    <p style="    margin: 0px;
-                                                                                                    margin-top: -18px;
-                                                                                                    margin-left: 0px;
-                                                                                                    margin-right: 31px;"
-                                                                                                        *ngIf="i === selectedIndex">
-                                                                                                        {{item.name}}
-                                                                                                    </p>
-                                                                                                    <p style="    margin: 0px;
-                                                                                                    margin-top: -18px;
-                                                                                                    margin-left: 0px;
-                                                                                                    margin-right: 31px;"
-                                                                                                        *ngIf="i !== selectedIndex">
-                                                                                                        {{item.name}}
-                                                                                                    </p>
-
-                                                                                                    <footer>
-                                                                                                        <div class="tm-testi__item-meta-content"
-                                                                                                            style="    text-align: center;">
-                                                                                                            <cite>
-                                                                                                                <span
-                                                                                                                    *ngIf="i === selectedIndex">
-                                                                                                                    {{item.footer}}</span>
-                                                                                                                <span
-                                                                                                                    *ngIf="i !== selectedIndex"
-                                                                                                                    class="tm-testi__item-name"
-                                                                                                                    mat-line>
-                                                                                                                    {{item.footer}}
-                                                                                                                </span>
-                                                                                                            </cite>
-
-                                                                                                        </div>
-                                                                                                    </footer>
+                                                                                                    <P>
+                                                                                                        <ngb-carousel
+                                                                                                            *ngIf="event_list">
+                                                                                                            <ng-template
+                                                                                                                ngbSlide
+                                                                                                                *ngFor="let event of past_events">
+                                                                                                                <p>{{event.paragraph}}
+                                                                                                                </p>
+                                                                                                                <footer>
+                                                                                                                    <div class="tm-testi__item-meta-content">
+                                                                                                                        <cite>
+                                                                                                                            <span>
+                                                                                                                                {{event.footer}}</span>
+                                                                                                                        </cite>
+                                                                                                                    </div>
+                                                                                                                </footer>
+                                                                                                            </ng-template>
+                                                                                                        </ngb-carousel>
+                                                                                                    </P>
                                                                                                 </div>
-                                                                                            </ng-template>
-
-                                                                                            <ng-template #nextTemplate>
-                                                                                                <span>next</span>
                                                                                             </ng-template>
 
                                                                                             <div id="tm-testi-slider-next-1"
                                                                                                 class="swiper-button-next tm-testi-slider__next"
-                                                                                                tabindex="0"
+                                                                                               
                                                                                                 role="button"
                                                                                                 aria-label="Next slide">
 
@@ -5797,19 +5768,11 @@
 
                                                                                             <div id="tm-testi-slider-prev-1"
                                                                                                 class="swiper-button-prev tm-testi-slider__prev"
-                                                                                                tabindex="0"
+                                                                                               
                                                                                                 role="button"
                                                                                                 aria-label="Previous slide">
-
-
-                                                                                                <ng-template
-                                                                                                    #prevTemplate>
-                                                                                                    <span>Previous</span>
-                                                                                                </ng-template>
-                                                                                            </div><span
-                                                                                                class="swiper-notification"
-                                                                                                aria-live="assertive"
-                                                                                                aria-atomic="true"></span>
+                                                                                            </div>
+                                                                                           
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -5875,17 +5838,17 @@
                                 <ul id="menu-main" class="menu">
                                     <li
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-274">
-                                        <a href="./index">Home</a>
+                                        <a [routerLink]="['/index']">Home</a>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062">
-                                        <a href="../components/about" aria-current="page">About</a>
+                                        <a href="/components/about">About</a>
                                     </li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756">
-                                        <a href="../components/services/">Services</a>
+                                        <a [routerLink]="['/components/services']">Services</a>
                                     </li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526">
-                                        <a href="../components/contacts/">Contacts</a>
+                                        <a [routerLink]="['/components/contacts']">Contacts</a>
                                     </li>
                                 </ul>
                             </div>

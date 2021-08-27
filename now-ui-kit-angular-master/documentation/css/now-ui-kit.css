@@ -8001,10 +8001,10 @@ Created using IcoMoon - icomoon.io
     display: block;
 }
 
-.carousel .carousel-inner {
+/* .carousel .carousel-inner {
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
     border-radius: 0.1875rem;
-}
+} */
 
 .carousel .card {
     max-width: 650px;

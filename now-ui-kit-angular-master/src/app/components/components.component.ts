@@ -22,7 +22,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
   event_list = [
     {
       footer: 'Lydia B. (Parent)',
-      event: 'We love Daijha! She is great with our active 3-year old son and finds activities that help cultivate his learning while also allowing him to expend energy. She is dependable and knowledgeable in her craft. We utilize her for day sitting and overnight sitting when we do “staycations” in order to have quality parent time.',
+      paragraph: 'We love Daijha! She is great with our active 3-year old son and finds activities that help cultivate his learning while also allowing him to expend energy. She is dependable and knowledgeable in her craft. We utilize her for day sitting and overnight sitting when we do “staycations” in order to have quality parent time.',
       eventLocation: 'Bangalore',
       eventDescription: 'In bangalore, first event is going to happen. Please be careful about it',
       img: 'https://picsum.photos/900/500?random&t=1',
@@ -31,7 +31,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     },
     {
       footer:'Helen P. (Parent)',
-      event: 'Daijha was our first non-family-member sitter, and she has since become part of our family. Not only is she reliable and thorough as a professional, she is caring and attentive to our children, pets and family overall. She is a joy and a comfort to our family every time we see her!  We couldn’t ask for a better care provider…',
+      paragraph: 'Daijha was our first non-family-member sitter, and she has since become part of our family. Not only is she reliable and thorough as a professional, she is caring and attentive to our children, pets and family overall. She is a joy and a comfort to our family every time we see her!  We couldn’t ask for a better care provider…',
       eventLocation: 'Dubai',
       eventDescription: 'Dubai is another place to host so,e, first event is going to happen. Please be careful about it',
       img: 'https://picsum.photos/900/500?random&t=3',
@@ -40,7 +40,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     },
     {
       footer: 'Ash M. (parent)',
-      event: 'Given her excellent repertoire with my child and other parents, we decided to also hire her for babysitting duties. She has truly been God-sent. I have never felt more comfortable leaving my child in someone else’s hands than I have with Daijha. She is CPR certified, attentive to small details, always on time and professional, and has proved herself a…',
+      paragraph: 'Given her excellent repertoire with my child and other parents, we decided to also hire her for babysitting duties. She has truly been God-sent. I have never felt more comfortable leaving my child in someone else’s hands than I have with Daijha. She is CPR certified, attentive to small details, always on time and professional, and has proved herself a…',
       eventLocation: 'New York',
       eventDescription: 'NewYork sits on top of event hosting',
       img: 'https://picsum.photos/900/500?random&t=4',
@@ -49,7 +49,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     },
     {
       footer: 'Naneki C. (Former Co Teacher)',
-      event: 'She’s an awesome, hands on and loving care giver. Kids and families love her! They can count on her to care for their littles while they are away.',
+      paragraph: 'She’s an awesome, hands on and loving care giver. Kids and families love her! They can count on her to care for their littles while they are away.',
       eventLocation: 'Singapore',
       eventDescription: 'Singapore is another great hosting city',
       img: 'https://picsum.photos/900/500?random&t=6',
