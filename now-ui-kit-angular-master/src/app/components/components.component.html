@@ -291,11 +291,11 @@
 
         /* Icon hover */
 
-        .elementor-element-f654755.elementor-view-stacked .own-elementor:hover {
+        /* .elementor-element-f654755.elementor-view-stacked .own-elementor:hover {
             background-color: #000000 !important;
             fill: #ffffff !important;
             color: #ffffff !important;
-        }
+        } */
 
         .elementor-view-stacked .own-elementor:hover {
             padding: .7186em .785em;
@@ -304,18 +304,6 @@
         .elementor-view-stacked .own-elementor {
             -webkit-border-radius: 50%;
             border-radius: 50%;
-        }
-
-        .elementor-element-9084wmx.elementor-view-stacked .elementor-icon:hover {
-            background-color: #000001 !important;
-            fill: #ffffff !important;
-            color: #ffffff !important;
-        }
-
-        .elementor-element-gg2kxy7.elementor-view-stacked .elementor-icon:hover {
-            background-color: #000001 !important;
-            fill: #ffffff !important;
-            color: #ffffff !important
         }
 
         .elementor-section.elementor-section-boxed>.elementor-container {
@@ -2041,17 +2029,7 @@
 
         } */
 
-        .elementor-element-9084wmx.elementor-view-stacked .elementor-icon:hover {
-            background-color: #000001 !important;
-            fill: #ffffff !important;
-            color: #ffffff !important;
-        }
 
-        .elementor-element-gg2kxy7.elementor-view-stacked .elementor-icon:hover {
-            background-color: #000001 !important;
-            fill: #ffffff !important;
-            color: #ffffff !important
-        }
 
         .elementor-column .elementor-widget-wrap .elementor-widget-container h5 {
             margin-bottom: 15px;
@@ -2170,13 +2148,13 @@
         }
 
         /* #Widgets misc */
-
+        /* 
         .widget_archive ul,
         .widget_categories ul,
         .widget_recent_entries ul,
         .widget_recent_comments ul,
         a.rsswidget,
-        .tagcloud a {}
+        .tagcloud a {} */
 
         /* #Widget date style */
 
@@ -2189,6 +2167,9 @@
             font-family: Lato, sans-serif;
             letter-spacing: 0em;
             color: #828282;
+        }
+        ngb-carousel a.carousel-control-prev {
+            display: none!important;
         }
 
         .invert .widget_recent_entries .post-date,
@@ -2210,41 +2191,84 @@
             color: #000000;
         }
 
+        /* Right arrow style */
         .widget_nav_menu ul li a::before {
             color: #000000;
+            content: url(/assets/icons/right-arrow.png);
         }
 
-        .widget_nav_menu ul li a:hover::before {
-            color: #828282;
+        .nc-icon-outline.ui-3_phone:before {
+            content: url(/assets/icons/phone.png);
         }
 
-        .invert .widget_nav_menu ul li a {
-            color: #ffffff;
+        .nc-icon-outline.ui-1_email-85:before {
+            content: url(/assets/icons/email.png);
         }
 
-        .invert .widget_nav_menu ul li a:hover {
-            color: #828282;
+        .fa-child:before {
+            content: url(/assets/icons/Babysittingh.png);
         }
 
-        .invert .widget_nav_menu ul li a::before {
-            color: #ffffff;
+        .fa-child:hover::before {
+            content: url(/assets/icons/Babysitting.png);
+            top: -37px;
         }
 
-        .invert .widget_nav_menu ul li a:hover::before {
-            color: #828282;
+        .fa-life-bouy:before,
+        .fa-life-buoy:before,
+        .fa-life-saver:before,
+        .fa-support:before,
+        .fa-life-ring:before {
+            content: url(/assets/icons/BackupCareh.png);
         }
 
-        .textwidget {
-            font-style: normal;
-            font-weight: 300;
-            font-size: 16px;
+        .fa-life-bouy:before,
+        .fa-life-buoy:before,
+        .fa-life-saver:before,
+        .fa-support:before,
+        .fa-life-ring:hover::before {
+            content: url(/assets/icons/BackupCare.png);
+            top: -37px;
         }
 
-        /* .textwidget {
-            color:
-                Variable not found
-        } */
+        .fa-moon:before {
+            content: url(/assets/icons/Overnightstayh.png);
+        }
 
+        .fa-moon:hover::before {
+            content: url(/assets/icons/Overnightstay.png);
+            top: -37px;
+        }
+
+        .fa-home:before {
+            content: url(/assets/icons/AfterSchool.png);
+
+        }
+
+        .fa-home:hover::before {
+            content: url(/assets/icons/AfterSchoolh.png);
+            top: -35px;
+            position: relative;
+        }
+
+        #toTop:before {
+            width: 100%;
+            line-height: 44px;
+            font-size: 12px;
+            content: url(/assets/icons/toTop.png);
+        }
+
+        blockquote:before {
+            content: url(/assets/icons/blockquote.png);
+            position: absolute;
+            top: -23px;
+            z-index: 1;
+            margin-left: -40px;
+        }
+
+        .tm-testi__item-body::before{
+            display: none;
+        }
         .footer-area .widget-title {
             font-style: normal;
             font-size: 16px;
@@ -4699,8 +4723,11 @@
             color: #ffffff;
         }
     </style>
-    <script type="text/javascript"
+    <!-- <script type="text/javascript"
         src="https://www.daijhassitting.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+    -->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+
     <script type="text/javascript"
         src="https://www.daijhassitting.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
     <link rel="https://api.w.org/" href="https://www.daijhassitting.com/wp-json/">
@@ -4815,11 +4842,11 @@
                                 data-parent-selector=".header-container_wrap" data-mobile-trigger="768"
                                 data-duration="300" data-mobile-button="1">
                                 <li id="menu-item-274"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-274 tm-mega-menu-top-item item-submenu-position-fullwidth">
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-274 tm-mega-menu-top-item  current-menu-item item-submenu-position-fullwidth">
                                     <a href="">Home</a>
                                 </li>
                                 <li id="menu-item-3062"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
+                                    class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-2487  menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
 
                                     <a [routerLink]="['/components/about']">
                                         About
@@ -4897,18 +4924,19 @@
                                                         data-id="1frxciv" data-element_type="column"
                                                         data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
                                                         style="margin-left: 407px;
-                                                        height: 756px;text-align: center;width: 40%;">
+                                                        height: 656px;text-align: center;width: 44%;">
                                                         <div
                                                             class="elementor-column-wrap  elementor-element-populated Card1">
                                                             <div class="elementor-widget-wrap">
                                                                 <div class="elementor-element elementor-element-gptpoag elementor-widget elementor-widget-heading"
                                                                     data-id="gptpoag" data-element_type="widget"
                                                                     data-widget_type="heading.default">
-                                                                    <div class="elementor-widget-container" style="    margin-top: -26px;
-                                                                    padding: 71px;
+                                                                    <div class="elementor-widget-container" style="   margin-top: -26px;
+                                                                    padding: 71px 11px;
                                                                     font-size: 169px;">
                                                                         <h2 class="elementor-heading-title elementor-size-default"
-                                                                            style="font-size: 67px;">
+                                                                            style="font-size: 67px;
+                                                                            white-space: nowrap;">
                                                                             Creating Gratification</h2>
                                                                     </div>
                                                                 </div>
@@ -4946,11 +4974,13 @@
                                                                 <div class=" elementor-element elementor-element-6k9sxcp elementor-widget elementor-widget-text-editor"
                                                                     data-id="6k9sxcp" data-element_type="widget"
                                                                     data-widget_type="text-editor.default">
-                                                                    <div class="elementor-widget-container" style="    padding: 122px;
+                                                                    <div class="elementor-widget-container" 
+                                                                    style=" padding: 122px 152px;
                                                                     font-size: 24px;
                                                                     font-weight: 300;
                                                                     line-height: 1.4em;
-                                                                    margin-top: -125px; color: black;">
+                                                                    margin-top: -125px;
+                                                                    color: black;">
                                                                         <div
                                                                             class="elementor-text-editor elementor-clearfix">
                                                                             <p>I aim to give my families the best child
@@ -5395,9 +5425,11 @@
                                                                                                                     style="background-color: white;
                                                                                                                 color: black;
                                                                                                                 fill: black;
-                                                                                                                font-size: 60px;">
+                                                                                                                font-size: 50px;
+                                                                                                                margin-top: -5px;
+                                                                                                                margin-bottom: 8px;">
                                                                                                                     <i aria-hidden="true"
-                                                                                                                        class="nc-icon-outline media-1_night"></i>
+                                                                                                                        class="far fa-moon"></i>
                                                                                                                 </span>
                                                                                                             </div>
                                                                                                             <div
@@ -5472,8 +5504,8 @@
                                                                                                         class="elementor-widget-container">
                                                                                                         <div
                                                                                                             class="elementor-icon-box-wrapper">
-                                                                                                            <div
-                                                                                                                class="elementor-icon-box-icon">
+                                                                                                            <div class="elementor-icon-box-icon"
+                                                                                                                style="height: 103px;">
                                                                                                                 <span
                                                                                                                     class="own-elementor"
                                                                                                                     style="background-color: white;
@@ -5481,8 +5513,9 @@
                                                                                                             fill: black;
                                                                                                             font-size: 50px;">
                                                                                                                     <i aria-hidden="true"
-                                                                                                                        style="    margin-bottom: 34px;"
-                                                                                                                        class="nc-icon-outline education_school">
+                                                                                                                        style="   margin-bottom: 19px;
+                                                                                                                        margin-top: 13px;"
+                                                                                                                        class="fas fa-home">
                                                                                                                     </i>
                                                                                                                 </span>
                                                                                                             </div>
@@ -5619,12 +5652,12 @@
 
                                                                                                 <!-- My slider -->
                                                                                                 <div class="tm-testi__inner"
-                                                                                                    style="height: 134px;">
+                                                                                                    style="height: 134px;position: relative">
 
                                                                                                     <blockquote>
 
                                                                                                         <div
-                                                                                                            class="tm-testi__item-body">
+                                                                                                            class="tm-testi__item-body" style="height: 0px;">
                                                                                                             <div
                                                                                                                 class="before-holder-default">
                                                                                                             </div>
@@ -5907,11 +5940,11 @@
                             <div class="menu-main-container">
                                 <ul id="menu-main" class="menu">
                                     <li
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-274">
+                                        class="menu-item menu-item-type-custom current-menu-item menu-item-object-custom menu-item-home menu-item-274">
                                         <a href="">Home</a>
                                     </li>
                                     <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062">
+                                        class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2487 current_page_item menu-item-3062">
                                         <a [routerLink]="['/components/about']">
                                             About
                                         </a>
@@ -6497,38 +6530,10 @@
 
 
 
-    <a href="#" id="toTop" style="display: inline;"></a>
+    <a href="#" id="toTop" style="display: none;"></a>
 
 
-    <!-- <div>
-        <div ng2-carouselamos [width]="500" [items]="[
-          { name: 'Alice'},
-          { name: 'Bob'},
-          { name: 'John Doe'},
-          { name: 'Jane Doe'}
-        ]" [$item]="itemTemplate" [$prev]="prevTemplate" [$next]="nextTemplate"
-            (onSelectedItem)="selectedItem = $event.item; selectedIndex = $event.index"></div>
-
-        <div>
-            Current item selected <br />
-            {{ selectedIndex }} - {{ selectedItem }}
-        </div>
-
-        <ng-template #prevTemplate>
-            <span>Previous</span>
-        </ng-template>
-
-        <ng-template #nextTemplate>
-            <span>next</span>
-        </ng-template>
-
-        <ng-template let-item let-i="index" #itemTemplate>
-        <div style="min-width: 200px">
-          <b *ngIf="i === selectedIndex">{{i}}. {{item.name}}</b>
-          <span *ngIf="i !== selectedIndex">{{i}}. {{item.name}}</span>
-        </div>
-      </ng-template>
-    </div> -->
+   
 </body>
 
 </html>

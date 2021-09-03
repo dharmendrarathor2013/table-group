@@ -226,13 +226,14 @@
         href="https://www.daijhassitting.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.8.3"
         type="text/css" media="all">
     <style id="elementor-frontend-inline-css" type="text/css">
-    .elementor-element .elementor-widget-container {
-    -webkit-transition: background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
-    transition: background .3s, border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
-    -o-transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
-    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
-    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
-}
+        .elementor-element .elementor-widget-container {
+            -webkit-transition: background .3s, border .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+            transition: background .3s, border .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+            -o-transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+            transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+            transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+        }
+
         .elementor-section.elementor-section-boxed>.elementor-container {
             max-width: 1200px;
         }
@@ -1803,7 +1804,7 @@
             font-size: 16px;
             line-height: 1.5;
             font-family: Lato, sans-serif;
-            
+
         }
 
         .widget_calendar tfoot td a:before {
@@ -1949,8 +1950,47 @@
             color: #000000;
         }
 
+        /* Right arrow style */
         .widget_nav_menu ul li a::before {
             color: #000000;
+            content: url(/assets/icons/right-arrow.png);
+        }
+
+        .nc-icon-outline.ui-3_phone:before {
+            content: url(/assets/icons/phone.png);
+        }
+
+        .nc-icon-outline.ui-1_email-85:before {
+            content: url(/assets/icons/email.png);
+
+        }
+
+        .nc-icon-outline.users-2_child:before {
+            content: url(/assets/icons/BabySittings.png);
+        }
+
+        .nc-icon-outline.objects_support-17:before {
+            content: url(/assets/icons/BackupCares.png);
+        }
+
+        .nc-icon-outline.media-1_night:before {
+            content: url(/assets/icons/OvernightStays.png);
+        }
+
+        .nc-icon-outline.education_school:before {
+            content: url(/assets/icons/afterschools.png);
+        }
+
+        .tm-testi--default .tm-testi__item-body .before-holder-default {
+            content: url(/assets/icons/blockquote.png);
+            position: absolute;
+            top: 0;
+            left:none;
+            height: none;
+            width: none;
+            border-radius: none;
+            border-width: none;
+            border-style: none;
         }
 
         .widget_nav_menu ul li a:hover::before {
@@ -4438,7 +4478,6 @@
 
 
     <style title="cherry-collected-dynamic-style" type="text/css">
-
         .cherry-popup-3944 .cherry-popup-container {
             width: 400px;
             height: 620px;

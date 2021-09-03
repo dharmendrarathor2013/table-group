@@ -4,7 +4,17 @@
 .carousel-item.active{
     display: block;
 }
+.carousel-item{
+  width: 84%!important;
+    text-align: center!important;
+    /* float: right; */
+    margin: 0 auto!important;
+float: none!important;
 
+}
+.carousel-indicators li{
+  display: none;
+}
 .carousel{
     // .carousel-inner{
     //     box-shadow: $box-shadow-raised;
@@ -22,4 +32,28 @@ ngb-carousel{
     width: 12px;
     height: 12px;
   }
+  a.carousel-control-next{
+    background: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+    position: absolute;
+    right: 20px;
+    margin-right: 5px;
+}
+a.carousel-control-prev{
+  background: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+  position: absolute;
+  left: 20px;
+  margin-left: -30px;
+}
+.carousel-inner {
+  position: relative;
+  width: 92%!important;
+}
 }

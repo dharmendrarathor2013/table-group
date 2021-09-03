@@ -1,0 +1,141 @@
+<!-- 
+<div class="all-conntent-page" style="padding-top:75px;padding-left:112px;">
+    <form fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" class="comman-from" style="padding-top: 10px;">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+            <mat-form-field appearance="fill" fxFlex="100" class="form-field-left">
+                <input matInput placeholder="Enter Show Name" class="placeholderinput">
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex="100" class="form-field-right">
+                <input matInput placeholder="Enter Show Date" class="placeholderinput">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+            <mat-form-field appearance="fill" fxFlex="100" class="full-width-field">
+                <input matInput placeholder="Show Description" class="placeholderinput">
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex="100" class="full-width-field">
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div class="row example-button" style="padding-top: 10px;">
+            <button mat-button color="primary" class="">Save</button>
+        </div>
+    </form>
+</div> -->
+
+<div class="all-conntent-page">
+    <div class="add-song" fxLayout="row" fxLayout.sm="column">
+        <div fxFlex="100" class="right">
+
+            <div fxLayout="row">
+                <div fxFlex="75">
+                    <h1>Add song to to your Setlist</h1>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <form fxLayout="column" fxLayoutAlign="start" class="comman-from" style="padding-top: 10px;">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                            <mat-label>Song Name</mat-label>
+                            <input matInput [value]="songName" disabled>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                            <mat-label>Artist Name</mat-label>
+                            <!-- <input matInput> -->
+                            <mat-select placeholder="">
+                                <mat-option value="option1">A1</mat-option>
+                                <mat-option value="option1">A2 </mat-option>
+                                <mat-option value="option1">A3</mat-option>
+                                <mat-option value="option1">A4</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                        <h1 style="padding-top:10px;">Choose your band mates for this song</h1>
+                    </div>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center">
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                            <mat-label>Band Role(eg Drums)</mat-label>
+                            <mat-select placeholder="" #eg_Drums>
+                                <mat-option value="Vocalist">Vocalist</mat-option>
+                                <mat-option value="Drums 1">Drums 1</mat-option>
+                                <mat-option value="Bass">Bass</mat-option>
+                                <mat-option value="Gultar">Gultar</mat-option>
+                                <mat-option value="keyboards">keyboards</mat-option>
+                                <mat-option value="Wind"> Wind</mat-option>
+                                <mat-option value="Other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div *ngIf="eg_Drums.value=='Other'">
+                            <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                                <mat-label>Band Role(eg Drums)</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                            <mat-label>Band mate(eg @johnsmith)</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" >
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                            <mat-label>Band Role(eg Bass)</mat-label>
+                            <mat-select placeholder="" #eg_Bass>
+                                <mat-option value="Vocalist">Vocalist</mat-option>
+                                <mat-option value="Drums 1">Drums 1</mat-option>
+                                <mat-option value="Bass">Bass</mat-option>
+                                <mat-option value="Gultar">Gultar</mat-option>
+                                <mat-option value="keyboards">keyboards</mat-option>
+                                <mat-option value="Wind"> Wind</mat-option>
+                                <mat-option value="Other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div *ngIf="eg_Bass.value=='Other'">
+                            <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                                <mat-label>Band Role(eg Drums)</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                            <mat-label>Band mate(eg @johnsmith)</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+    
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" >
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-left">
+                            <mat-label>Band Role(eg Guitar)</mat-label>
+                            <mat-select placeholder="" #eg_Guitar>
+                                <mat-option value="Vocalist">Vocalist</mat-option>
+                                <mat-option value="Drums 1">Drums 1</mat-option>
+                                <mat-option value="Bass">Bass</mat-option>
+                                <mat-option value="Gultar">Gultar</mat-option>
+                                <mat-option value="keyboards">keyboards</mat-option>
+                                <mat-option value="Wind"> Wind</mat-option>
+                                <mat-option value="Other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div *ngIf="eg_Guitar.value=='Other'">
+                            <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                                <mat-label>Band Role(eg Drums)</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field appearance="fill" fxFlex="50" class="form-field-right">
+                            <mat-label>Band mate(eg @johnsmith)</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="comman-button" style="padding-top: 10px;">
+                        <button mat-button>SAVE & SEND</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

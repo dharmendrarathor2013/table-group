@@ -13,15 +13,10 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { BrowserModule } from '@angular/platform-browser';
 
-
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from "@angular/material/radio";
 import { MatInputModule } from '@angular/material/input';
-import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatListModule } from "@angular/material/list";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -39,7 +34,7 @@ import { MatListModule } from "@angular/material/list";
         ExamplesModule,
         Ng2CarouselamosModule,
         BrowserModule,
-        
+        HttpClientModule,
         MatIconModule,
         MatInputModule,
         MatButtonModule,

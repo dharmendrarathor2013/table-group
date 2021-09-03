@@ -2013,8 +2013,27 @@
             color: #000000;
         }
 
+        /* Right arrow style */
         .widget_nav_menu ul li a::before {
             color: #000000;
+            content: url(/assets/icons/right-arrow.png);
+        }
+
+        .nc-icon-outline.ui-3_phone:before {
+            content: url(/assets/icons/phone.png);
+        }
+
+        .nc-icon-outline.ui-1_email-85:before {
+            content: url(/assets/icons/email.png);
+
+        }
+
+        .fa-paper-plane:before {
+            content: url(/assets/icons/paperplane.png);
+        }
+
+        .fa-phone-alt:before {
+            content: url(/assets/icons/call.png);
         }
 
         .widget_nav_menu ul li a:hover::before {
@@ -4709,8 +4728,7 @@
                                                                                 <div class="elementor-icon-box-wrapper">
                                                                                     <div
                                                                                         class="elementor-icon-box-icon">
-                                                                                        <span
-                                                                                            class="elementor-icon elementor-animation-">
+                                                                                        <span>
                                                                                             <i aria-hidden="true"
                                                                                                 class="fas fa-phone-alt"></i>
                                                                                         </span>
@@ -4755,8 +4773,7 @@
                                                                                 <div class="elementor-icon-box-wrapper">
                                                                                     <div
                                                                                         class="elementor-icon-box-icon">
-                                                                                        <span
-                                                                                            class="elementor-icon elementor-animation-">
+                                                                                        <span>
                                                                                             <i aria-hidden="true"
                                                                                                 class="far fa-paper-plane"></i>
                                                                                         </span>
@@ -4882,7 +4899,7 @@
                                                                                                             style="width: 300%;">
                                                                                                         <p>
                                                                                                             <span
-                                                                                                            style="text-align: left;
+                                                                                                                style="text-align: left;
                                                                                                             position: absolute;
                                                                                                             left: 18px;
                                                                                                             right: -772px;
@@ -4898,8 +4915,8 @@
                                                                                                                 field is
                                                                                                                 required.
                                                                                                             </span>
-                                                                                                            <span 
-                                                                                                             style="text-align: left;
+                                                                                                            <span
+                                                                                                                style="text-align: left;
                                                                                                             position: absolute;
                                                                                                             left: 18px;
                                                                                                             right: -772px;
@@ -4918,7 +4935,7 @@
                                                                                                                 is
                                                                                                                 invalid.
                                                                                                             </span>
-                                                                                                           
+
                                                                                                         </p>
                                                                                                     </span>
                                                                                                 </label>
@@ -4928,6 +4945,7 @@
                                                                                                     <span
                                                                                                         class="wpcf7-form-control-wrap your-subject"><input
                                                                                                             type="text"
+                                                                                                            formControlName="subject"
                                                                                                             name="your-subject"
                                                                                                             value=""
                                                                                                             size="40"
@@ -4942,6 +4960,7 @@
                                                                                                     <span
                                                                                                         class="wpcf7-form-control-wrap your-message"><textarea
                                                                                                             name="your-message"
+                                                                                                            formControlName="messageText"
                                                                                                             cols="40"
                                                                                                             rows="10"
                                                                                                             class="wpcf7-form-control wpcf7-textarea"
@@ -5045,8 +5064,7 @@
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756">
                                         <a [routerLink]="['/components/services']">Services</a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-826 current_page_item menu-item-1526">
+                                    <li class="menu-item menu-item-type-post_type current-menu-item menu-item-object-page menu-item-5756">
                                         <a href="/components/contacts">Contacts</a>
                                     </li>
                                 </ul>
@@ -5437,7 +5455,7 @@
 
 
 
-    <a href="" id="toTop"  style="display: none;"><span></span></a>
+    <a href="" id="toTop" style="display: none;"><span></span></a>
 </body>
 
 </html>

@@ -2099,15 +2099,6 @@
             color: #828282;
         }
 
-        /* #Widgets misc */
-
-        .widget_archive ul,
-        .widget_categories ul,
-        .widget_recent_entries ul,
-        .widget_recent_comments ul,
-        a.rsswidget,
-        .tagcloud a {}
-
         /* #Widget date style */
 
         .widget_recent_entries .post-date,
@@ -2140,8 +2131,43 @@
             color: #000000;
         }
 
+        /* Right arrow style */
         .widget_nav_menu ul li a::before {
             color: #000000;
+            content: url(/assets/icons/right-arrow.png);
+        }
+
+        .nc-icon-outline.ui-3_phone:before {
+            content: url(/assets/icons/phone.png);
+        }
+
+        .nc-icon-outline.ui-1_email-85:before {
+            content: url(/assets/icons/email.png);
+
+        }
+
+
+        .toTop:before {
+            width: 100%;
+            line-height: 44px;
+            font-size: 12px;
+            content: url(/assets/icons/toTop.png);
+        }
+
+        .elementor .swiper-button-prev:before {
+            content: url(/assets/icons/left_arrow.png);
+        }
+
+        .elementor .swiper-button-prev:hover::before {
+            content: url(/assets/icons/left_arrowh.png);
+        }
+
+        .elementor .swiper-button-next:before {
+            content: url(/assets/icons/right_arrow.png);
+        }
+
+        .elementor .swiper-button-next:hover::before {
+            content: url(/assets/icons/right_arrowh.png);
         }
 
         .widget_nav_menu ul li a:hover::before {
@@ -2169,11 +2195,6 @@
             font-weight: 300;
             font-size: 16px;
         }
-
-        /*         
-        .textwidget {
-            color: Variable not found
-        } */
 
         .footer-area .widget-title {
             font-style: normal;
@@ -3137,7 +3158,7 @@
             color: #ffffff;
         }
 
-        .template-media-icon-bg .services-item-overflow::after {}
+        /* .template-media-icon-bg .services-item-overflow::after {} */
 
         .template-media-icon-bg-2 .services-item-inner {
             border-color: #adadad;
@@ -4721,7 +4742,7 @@
                                     <a [routerLink]="['/index']">Home</a>
                                 </li>
                                 <li id="menu-item-3062"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
+                                    class="menu-item menu-item-type-post_type menu-item-object-page  current-menu-item page_item page-item-2487  menu-item-3062 tm-mega-menu-top-item item-submenu-position-fullwidth">
                                     <a href="/components/about">About</a>
                                 </li>
                                 <li id="menu-item-5756"
@@ -5632,7 +5653,6 @@
                                                                                             <div class="tm-testi__list swiper-wrapper tm-testi-slider__items"
                                                                                                 style="transition-duration: 0ms; transform: translate3d(-1171px, 0px, 0px);">
                                                                                                 <div class="tm-testi__item swiper-slide tm-testi-slider__item swiper-slide-duplicate swiper-slide-prev"
-                                                                                                    
                                                                                                     style="width: 1156px; margin-right: 15px;">
                                                                                                     <div
                                                                                                         class="tm-testi__inner">
@@ -5719,21 +5739,19 @@
                                                                                                     style="width: 1161px; margin-right: 15px;">
                                                                                                     <div
                                                                                                         class="tm-testi__inner">
-
-                                                                                                        <!-- MY Slider -->
                                                                                                         <div>
                                                                                                             <div ng2-carouselamos
                                                                                                                 [width]="1137"
                                                                                                                 [items]="[{ }]"
-                                                                                                                >
+                                                                                                                [$item]="itemTemplate">
+
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
 
                                                                                             </div>
-                                                                                            <ng-template 
-                                                                                                #itemTemplate>
+                                                                                            <ng-template #itemTemplate>
                                                                                                 <div class="tm-testi__item-body"
                                                                                                     style="min-width: 1163px;height: 200px;  margin: 5em auto;">
                                                                                                     <P>
@@ -5741,11 +5759,12 @@
                                                                                                             *ngIf="event_list">
                                                                                                             <ng-template
                                                                                                                 ngbSlide
-                                                                                                                *ngFor="let event of past_events">
+                                                                                                                *ngFor="let event of event_list">
                                                                                                                 <p>{{event.paragraph}}
                                                                                                                 </p>
                                                                                                                 <footer>
-                                                                                                                    <div class="tm-testi__item-meta-content">
+                                                                                                                    <div
+                                                                                                                        class="tm-testi__item-meta-content">
                                                                                                                         <cite>
                                                                                                                             <span>
                                                                                                                                 {{event.footer}}</span>
@@ -5758,21 +5777,6 @@
                                                                                                 </div>
                                                                                             </ng-template>
 
-                                                                                            <div id="tm-testi-slider-next-1"
-                                                                                                class="swiper-button-next tm-testi-slider__next"
-                                                                                               
-                                                                                                role="button"
-                                                                                                aria-label="Next slide">
-
-                                                                                            </div>
-
-                                                                                            <div id="tm-testi-slider-prev-1"
-                                                                                                class="swiper-button-prev tm-testi-slider__prev"
-                                                                                               
-                                                                                                role="button"
-                                                                                                aria-label="Previous slide">
-                                                                                            </div>
-                                                                                           
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -5841,7 +5845,7 @@
                                         <a [routerLink]="['/index']">Home</a>
                                     </li>
                                     <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487 current_page_item menu-item-3062">
+                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2487  menu-item-3062">
                                         <a href="/components/about">About</a>
                                     </li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5756">
@@ -6424,7 +6428,7 @@
 
 
 
-    <a href="#" id="toTop" style="display: inline;"><span></span></a>
+    <a href="#" class="toTop" style="display: inline;"><span></span></a>
 </body>
 
 </html>
